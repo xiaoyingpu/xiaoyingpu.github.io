@@ -1,6 +1,6 @@
 ---
 title: Geomorphology Mapping Project
-description: Nil
+author: Xiaoying Pu
 date: 2015-12-01
 layout: post
 categories: geology

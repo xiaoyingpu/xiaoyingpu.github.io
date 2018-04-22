@@ -1,5 +1,5 @@
 ---
-author: ngc6618
+author: Xiaoying Pu
 comments: true
 date: 2014-12-13 18:07:03+00:00
 layout: post

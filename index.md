@@ -6,7 +6,10 @@ title:
 
 
 
-I am a first-year PhD student at the University of Michigan.
+I am a PhD student in Computer Science and Engineering at the University of Michigan. I work with Professor Matt Kay in the School of Information.
+
+
+
 
 
 __News__
