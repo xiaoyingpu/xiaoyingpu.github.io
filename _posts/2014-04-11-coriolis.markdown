@@ -1,0 +1,136 @@
+---
+title: Coriolis Force Simulation
+description: PHYS 212E Final Project
+date: 2014-04-11
+layout: post
+categories: physics
+---
+
+
+> Use VPython to simulate a pendulum under Coriolis effect. Keeps track of kinetic and potential energy for sanity check.
+
+
+## Governing equation
+
+
+$$ \boldsymbol{a}\_C = -2 \times \boldsymbol{ \Omega\_{Earth} \times v} $$
+
+```python
+from visual import *
+from visual.graph import *
+
+# Basic constants
+
+g = vector(0, -9.8, 0)              # Gravitational constant
+L = 10                              # Lenth of the string
+latitude = - pi/2                  # Latitude
+rotAngFreq = 2 * pi / 50          # Rotational Angular Frequency of earth
+theta = pi / 8                      # Initial theta
+phi = pi/ 4                        # Initial phi
+Lnaut = 10                          # Initial stretch of spring
+k =10000000                    # Wierd spring constant
+velo = vector(0,0,0)                # Intermediate step for Euler
+
+# Scene set up
+scene.center = (0, -0.5*L,0)
+
+# Some labels
+latiLabel = label(pos = vector(0,0,0))
+latiLabel.text = 'Current Latitude: {0:4.2f}'.format(latitude / pi * 180) +\
+                "\n" + "Day length ={0:4.1f}".format(1/(rotAngFreq / 2 / pi)) + "s"
+
+# Plot velocity, magnitude of coriolis force and total energy
+graph1 = gdisplay(xmax = 25, ymax = 4.2)
+label(display=graph1.display, pos=(3,3), text="mag velo")
+label(display=graph1.display, pos=(3,0), text="mag cori")
+label(display=graph1.display, pos=(3,0.8), text="E tot")
+coriPlot = gcurve(gdisplay = graph1, color = color.green)
+velPlot = gcurve(gdisplay = graph1, color = color.cyan)
+energyPlot = gcurve(gdisplay = graph1, color = color.orange)
+
+def polToCart(theta, phi):
+    """for initial pos only"""
+    return vector(Lnaut * sin(theta) * sin(phi), -Lnaut * cos(theta), Lnaut * sin(theta) * cos(phi))
+
+def springForce(ball):
+    L = 10
+    return (-1) * k * (mag(ball.pos) - L) * norm(ball.pos)
+
+def fCori(latitude):
+    """
+    Coriolis parameter
+    returns 2 * omega (earth rotational something)
+    """
+    result = (-2) * rotAngFreq * vector(0, sin(latitude), -cos(latitude))
+    return result
+
+def coriForce(lnVelo):
+    """returns acceleration due to Coriolis force"""
+    return cross(fCori(latitude), lnVelo)
+
+coriVec = coriForce(velo)                            # Initial Coriolis force
+
+# Drawing arcs
+lst = []
+lst1 = []
+for i in arange(-L, L, 0.01):
+    lst += [(i, (L**2 - i**2)**0.5 - L, 0)]
+    lst1 += [(0, (L**2 - i**2)**0.5 - L, i)]
+xAxis = curve(pos= lst, color = color.white)          # x-axis arc
+yAxis = curve(pos=lst1, color = color.white)          # y-axis arc
+textNorth = text(text = "North", align = "center",pos = (0, -L,-L))
+textEast = text(text = "East", align = "center",pos = (L,-L,0))
+
+# Set up
+ball = sphere(pos = polToCart(theta, phi), radius = 0.5, material = materials.earth,
+              track = curve(color = color.orange))
+string = curve(pos = [ball.pos, (0,0,0)])
+arrowlnVelo = arrow(pos = ball.pos, color = color.cyan, axis = velo)
+arrowCori = arrow(pos = ball.pos, color = color. green, axis = coriVec)
+arrowf = arrow(pos = ball.pos, material = materials.silver, axis = fCori(latitude))
+l = label(pos = ball.pos,space=5,xoffset=20,yoffset=12)
+
+# For optional plotting
+K = 1/2 * mag(velo) ** 2
+U = mag(g) * ball.pos.y
+Etot = K + U
+
+# Stepping
+t = 0
+dt = 0.0001
+
+while True:
+    rate(100000)
+
+    cori = coriForce(velo)                              # Get Coriolis force
+    magi = mag(cori)                                    # Get its magitude
+
+    sprVec = springForce(ball)                          # get spring acceleration
+    accel = sprVec + g + cori                        # Calculate the total acceleration due to g, cori and spr
+    velo += accel * dt                                  # calc the velocity
+    ball.pos += velo * dt                              # update ball's position
+
+    ball.track.append(ball.pos)                        # Updating the tail
+    string.pos = [ball.pos, (0,0,0)]                    # and the spring
+
+    arrowlnVelo. axis = velo                            # Update all the arrows and positions
+    arrowlnVelo.pos = ball.pos
+    arrowCori.axis = cori * 5                        # *5 just for visualization
+    arrowCori.pos = ball.pos
+    arrowf.pos = ball.pos
+    arrowf.axis = -fCori(latitude) * 10                # *10 to make the arrows ... prettier
+
+
+    K = 1/2 * mag(velo) ** 2                            # Calculate the total energy
+    U = mag(g) * ball.pos.y
+    Etot = K + U
+    l.pos = ball.pos                                    # Updating the energy lable
+    l.text = 'Etot = {0:4.3f}'.format(Etot)
+
+    coriPlot.plot(pos = (t, mag(cori)))              # Plotting
+    velPlot.plot(pos = (t, mag(velo)))                  # The plot is not that useful, after all..
+    energyPlot.plot(pos = (t, Etot /10 + 10))          # + 10 to move the energy curve up a bit
+
+    t += dt 
+                                               # Time increment
+```
