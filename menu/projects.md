@@ -1,14 +1,14 @@
 ---
 layout: page
 title: Projects
-img: siparcs/IMG_0291.JPG
+<!-- img: siparcs/IMG_0291.JPG -->
 ---
 
 ## Inter-model Comparison for Climate Simulations
 
 In Summer 2016, I explored vis at National Center for Atmospheric Research with Dr. Rick Brownrigg.
 
-![](assets/img/siparcs/IMG_0291.JPG)
+<!-- ![](assets/img/siparcs/IMG_0291.JPG) -->
 
 ## Physiological Computing
 
