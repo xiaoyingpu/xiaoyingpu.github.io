@@ -21,9 +21,12 @@ plugins:             [jekyll-paginate, jekyll-sitemap, jekyll-feed, jekyll-seo-t
 
 # Customise atom feed settings (this is where Jekyll-Feed gets configuration information)
 title:		           'Xiaoying Pu'
-description:	       ''
-# author:              'Paul Le'
+description:	       'Vis/OpenScience'
+author:              'Paul Le'
 
 # RSS 2.0 can be used instead of Atom by uncommenting following two lines
 #feed:
 #  path: rss-feed.xml
+
+# plugins:
+#   - jekyll-redirect-from

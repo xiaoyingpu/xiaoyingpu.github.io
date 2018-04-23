@@ -1,12 +1,12 @@
 ---
 layout: page
 title: Projects
-
+img: cover.jpeg
 ---
 
 
 
-![Bucknell computing center]({{ "/assets/img/cover.jpeg" | absolute_url }}) 
+<!-- ![Bucknell computing center]({{ "/assets/img/cover.jpeg" | absolute_url }})  -->
 
 
 
