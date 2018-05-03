@@ -25,11 +25,12 @@ I am a Ph.D. student in Computer Science and Engineering at the University of Mi
 	- I interned at the National Center for Atmospheric Research (NCAR) and worked with Dr. Rick Brownrigg. (In addition to the Rockies,) I explored the problem of  presenting climate model similarities.
 - __@ Bucknell University__
 	- Physiological Computing (2015): I had the pleasure of working with Professor Evan Peck in Computer Science.
-```java
+<!--```java
 public static void main(String[] args) {
     new FlyLoop(100, true).go();
 }
 ```
+-->
 	- Geochemistry (2014): As a freshman, I dabbled in geochemistry with Professor Carl Kirby in Geology & Environmental Geosciences.
 
 
