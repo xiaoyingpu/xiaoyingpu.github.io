@@ -32,6 +32,7 @@ I am a Ph.D. student in Computer Science and Engineering at the University of Mi
 
 - 02/2018: Attended the Social and Behavioral Sciences Research Initiative (SBSRI) workshop at UIUC.
 - 04/2018: My first time at CHI!
+- 06/2018: SIPS @ Grand Rapids.
 
 <!--```java
 public static void main(String[] args) {
