@@ -30,6 +30,7 @@ I am a Ph.D. student in Computer Science and Engineering at the University of Mi
 
 # News
 
+- Position paper _The garden of forking paths in visualization: A design space for reliable exploratory visual analytics_ accepted to BELIV 2018.
 - 02/2018: Attended the Social and Behavioral Sciences Research Initiative (SBSRI) workshop at UIUC.
 - 04/2018: My first time at CHI!
 - 06/2018: SIPS @ Grand Rapids.
