@@ -10,7 +10,6 @@ header:
 
 
 
-## Past Projects
 
 - __@ NCAR__ (2016): 
 	- I interned at the National Center for Atmospheric Research (NCAR) and worked with Dr. Rick Brownrigg. (In addition to the Rockies,) I explored the problem of  presenting climate model similarities.
