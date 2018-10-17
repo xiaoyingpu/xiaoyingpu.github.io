@@ -5,7 +5,7 @@ permalink: /projects/
 header:
   overlay_image: /assets/images/cover.jpeg
   caption: "Photo I took outside of Bucknell's Computer Center"
-
+  show_overlay_excerpt: false
 ---
 
 
