@@ -9,12 +9,12 @@ sidebar:
 
 I am a Ph.D. student in Computer Science and Engineering at the University of Michigan. I work with Professor [Matthew Kay](http://mjskay.com/) in the School of Information. I design and evaluate visualizations to make them statistically reliable. I also have a keen interest in adopting and improving open science practices.
 
-I am currently thinking about
+<!-- I am currently thinking about
 
 - Making visual analytics systems more statistically reliable
 - Designing and evaluating uncertainty visualizations
 - Understanding and improving preregistration
-
+ -->
 
 
 ## Publication
