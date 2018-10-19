@@ -11,8 +11,8 @@ header:
 
 
 
-- __@ NCAR__ (2016): 
+- __@ NCAR__ (2016):
 	- I interned at the National Center for Atmospheric Research (NCAR) and worked with Dr. Rick Brownrigg. (In addition to the Rockies,) I explored the problem of  presenting climate model similarities.
 - __@ Bucknell University__
-	- Physiological Computing (2015): I had the pleasure of working with Professor Evan Peck in Computer Science.
+	- Physiological Computing (2015): I worked with Professor Evan Peck in Computer Science on a project about using physiological signals to improve decision-making.
 	- Geochemistry (2014): As a freshman, I dabbled in geochemistry with Professor Carl Kirby in Geology & Environmental Geosciences.
