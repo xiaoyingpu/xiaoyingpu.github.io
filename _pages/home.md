@@ -7,7 +7,7 @@ sidebar:
 ---
 
 
-I am a Ph.D. student in Computer Science and Engineering at the University of Michigan. I work with Professor [Matthew Kay](http://mjskay.com/) in the School of Information. I design and evaluate visualizations to make them statistically reliable. I also have a keen interest in adopting and improving open science practices.
+I am a Ph.D. student in Computer Science and Engineering at the University of Michigan. I work with Professor [Matthew Kay](http://mjskay.com/) in the School of Information. I design and evaluate visualizations to make them statistically reliable. Relatedly, I look at what uncertainty visualizations work best. I also have a keen interest in adopting and improving open science practices.
 
 <!-- I am currently thinking about
 
@@ -19,17 +19,17 @@ I am a Ph.D. student in Computer Science and Engineering at the University of Mi
 
 ## Publication
 
-_The Garden of Forking Paths in Visualization: A Design Space for Reliable Exploratory Visual Analytics_
+_The Garden of Forking Paths in Visualization: A Design Space for Reliable Exploratory Visual Analytics_ (BELIV 2018).
 
-_Xiaoying Pu_, Matthew Kay   [[PDF]({{"/files/beliv2018_forking_paths.pdf"}})]
+ _Xiaoying Pu_, Matthew Kay   [[PDF]({{"/files/beliv2018_forking_paths.pdf"}})]
 
 <!-- ![Bucknell computing center]({{ "/assets/img/cover.jpeg" | absolute_url }})   -->
 
 
 ## News
 
-- 10/2018: My first time at VIS! Presenting my position paper at BELIV.
+- 10/2018: First time at VIS! Presenting my position paper at [BELIV](https://beliv-workshop.github.io/schedule.html).
 - 08/2018: APA annual convention @ San Francisco.
-- 06/2018: SIPS @ Grand Rapids.
+- 06/2018: [SIPS](https://www.improvingpsych.org/SIPS2018/) @ Grand Rapids.
 - 04/2018: My first time at CHI!
-- 02/2018: Attended the Social and Behavioral Sciences Research Initiative (SBSRI) workshop at UIUC.
+- 02/2018: Social and Behavioral Sciences Research Initiative (SBSRI) workshop at UIUC.
