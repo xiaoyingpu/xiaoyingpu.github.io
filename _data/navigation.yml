@@ -1,7 +1,7 @@
 main:
   - title: "Home"
     url: /
-  - title: "Past Projects"
+  - title: "Projects"
     url: /projects/
 #   - title: "Posts"
 #     url: /year-archive/
@@ -16,5 +16,7 @@ main:
 cv_section:
   - title: "Publication"
     url: "#publication"
+  - title: "Presentations"
+    url: "#presentations"
   - title: "News"
     url: "#news"

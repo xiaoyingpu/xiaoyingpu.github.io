@@ -17,7 +17,7 @@ I am a Ph.D. student in Computer Science and Engineering at the University of Mi
  -->
 
 
-## Publication
+### Publication
 
 _The Garden of Forking Paths in Visualization: A Design Space for Reliable Exploratory Visual Analytics_ (BELIV 2018).
 
@@ -25,10 +25,15 @@ _The Garden of Forking Paths in Visualization: A Design Space for Reliable Explo
 
 <!-- ![Bucknell computing center]({{ "/assets/img/cover.jpeg" | absolute_url }})   -->
 
+### Presentations
 
-## News
+- Kay, M.,  __Pu, X.__, and Conrad, F. "Preregistration: Assessing Whether the Pledge Matches the Report''. Presentation at the APA Annual Convention, San Francisco, CA. August 2018.
+-  __Pu, X.__ and  Kirby, C.S., "Feasibility of using freshwater mussels to monitor Ba and Sr contamination due to shale gas flowback water in Pennsylvania streams.'' Geological Society of America Abstracts with Programs, Vol. 46, No. 6, p.315. (Poster presentation at 2014 Geological Society of America Annual Meeting in Vancouver, BC.)
 
-- 10/2018: First time at VIS! Presenting my position paper at [BELIV](https://beliv-workshop.github.io/schedule.html).
+
+### News
+
+- 10/2018: First time at IEEE VIS! Presented my position paper at the [BELIV](https://beliv-workshop.github.io/schedule.html) workshop.
 - 08/2018: APA annual convention @ San Francisco.
 - 06/2018: [SIPS](https://www.improvingpsych.org/SIPS2018/) @ Grand Rapids.
 - 04/2018: My first time at CHI!
