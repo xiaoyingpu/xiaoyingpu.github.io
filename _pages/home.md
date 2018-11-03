@@ -16,6 +16,10 @@ I am a Ph.D. student in Computer Science and Engineering at the University of Mi
 - Understanding and improving preregistration
  -->
 
+### CV
+
+My CV is [here]({{"files/pu_cv.pdf"}}).
+
 
 ### Publication
 
@@ -25,10 +29,10 @@ _The Garden of Forking Paths in Visualization: A Design Space for Reliable Explo
 
 <!-- ![Bucknell computing center]({{ "/assets/img/cover.jpeg" | absolute_url }})   -->
 
-### Presentations
+<!-- ### Presentations
 
 - Kay, M.,  __Pu, X.__, and Conrad, F. "Preregistration: Assessing Whether the Pledge Matches the Report''. Presentation at the APA Annual Convention, San Francisco, CA. August 2018.
--  __Pu, X.__ and  Kirby, C.S., "Feasibility of using freshwater mussels to monitor Ba and Sr contamination due to shale gas flowback water in Pennsylvania streams.'' Geological Society of America Abstracts with Programs, Vol. 46, No. 6, p.315. (Poster presentation at 2014 Geological Society of America Annual Meeting in Vancouver, BC.)
+-  __Pu, X.__ and  Kirby, C.S., "Feasibility of using freshwater mussels to monitor Ba and Sr contamination due to shale gas flowback water in Pennsylvania streams.'' Geological Society of America Abstracts with Programs, Vol. 46, No. 6, p.315. (Poster presentation at 2014 Geological Society of America Annual Meeting in Vancouver, BC.) -->
 
 
 ### News

@@ -2,10 +2,9 @@
 layout: single
 author_profile: true
 permalink: /projects/
-header:
-  overlay_image: /assets/images/cover.jpeg
-  image_description: "Photo I took outside of Bucknell's Computer Center"
-  show_overlay_excerpt: false
+# header:
+  # overlay_image: /assets/images/cover.jpeg
+  # image_description: "Photo I took outside of Bucknell's Computer Center"
 ---
 
 ## The garden of statistically reliable visualizations
