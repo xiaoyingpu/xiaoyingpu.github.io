@@ -7,6 +7,8 @@ permalink: /projects/
   # image_description: "Photo I took outside of Bucknell's Computer Center"
 ---
 
+# Current Projects
+
 ## The garden of statistically reliable visualizations
 
 > In this garden of forking paths, whatever route you take seems predetermined, but that’s because the choices are done implicitly.
@@ -24,7 +26,12 @@ _Read the eight-page version [here]({{"/files/beliv2018_forking_paths.pdf"}})._
 
 The replication crisis—a failure to replicate foundational studies—has sparked a conversation in psychology, HCI, and beyond about scientific reliability. To address the crisis, researchers increasingly adopt preregistration: the practice of documenting research plans before conducting a study. We view preregistration, often an online form/template, as a user-centered design problem to ensure preregistration achieves its intended goal.
 
-     --- undergraduate projects below ---
+----
+
+
+
+# Undergraduate projects
+
 
 ## Visualizing the comparison among climate model ensemble members
 
