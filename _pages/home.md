@@ -7,6 +7,7 @@ sidebar:
 ---
 
 
+
 I am a Ph.D. student in Computer Science and Engineering at the University of Michigan. I work with Professor [Matthew Kay](http://mjskay.com/) in the School of Information. I design and evaluate visualizations to make them statistically reliable. Relatedly, I look at what uncertainty visualizations work best. I also have a keen interest in adopting and improving open science practices.
 
 <!-- I am currently thinking about
@@ -40,5 +41,5 @@ _The Garden of Forking Paths in Visualization: A Design Space for Reliable Explo
 - 10/2018: First time at IEEE VIS! Presented my position paper at the [BELIV](https://beliv-workshop.github.io/schedule.html) workshop.
 - 08/2018: APA annual convention @ San Francisco.
 - 06/2018: [SIPS](https://www.improvingpsych.org/SIPS2018/) @ Grand Rapids.
-- 04/2018: My first time at CHI!
+- 04/2018: First time at CHI!
 - 02/2018: Social and Behavioral Sciences Research Initiative (SBSRI) workshop at UIUC.
