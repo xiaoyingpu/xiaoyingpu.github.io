@@ -16,15 +16,15 @@ minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt"
 
 # Site Settings
 locale                   : "en-US"
-title                    : " "
+title                    : "Xiaoying Pu"
 title_separator          : "|"
 name                     : "Xiaoying Pu"
-description              : #"Vis/Open Sci"
+description              : #"Vis/Uncertainty/Open Sci"
 url                      : "https://xiaoyingpu.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : "xiaoyingpu/xioayingpu.github.io"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
-# breadcrumbs            : false # true, false (default)
+breadcrumbs              : # false # true, false (default)
 words_per_minute         : 200
 comments:
   provider               : # false (default), "disqus", "discourse", "facebook", "google-plus", "staticman", "staticman_v2" "custom"

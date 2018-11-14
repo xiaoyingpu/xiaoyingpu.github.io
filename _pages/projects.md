@@ -2,12 +2,12 @@
 layout: single
 author_profile: true
 permalink: /projects/
+title: "Current Projects"
 # header:
   # overlay_image: /assets/images/cover.jpeg
   # image_description: "Photo I took outside of Bucknell's Computer Center"
 ---
 
-# Current Projects
 
 ## The garden of statistically reliable visualizations
 
