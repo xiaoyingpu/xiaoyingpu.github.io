@@ -30,16 +30,19 @@ _The Garden of Forking Paths in Visualization: A Design Space for Reliable Explo
 
 <!-- ![Bucknell computing center]({{ "/assets/img/cover.jpeg" | absolute_url }})   -->
 
-<!-- ### Presentations
+### Presentation
 
 - Kay, M.,  __Pu, X.__, and Conrad, F. "Preregistration: Assessing Whether the Pledge Matches the Report''. Presentation at the APA Annual Convention, San Francisco, CA. August 2018.
+
+<!--
 -  __Pu, X.__ and  Kirby, C.S., "Feasibility of using freshwater mussels to monitor Ba and Sr contamination due to shale gas flowback water in Pennsylvania streams.'' Geological Society of America Abstracts with Programs, Vol. 46, No. 6, p.315. (Poster presentation at 2014 Geological Society of America Annual Meeting in Vancouver, BC.) -->
 
 
 ### News
 
-- 10/2018: First time at IEEE VIS! Presented my position paper at the [BELIV](https://beliv-workshop.github.io/schedule.html) workshop.
+- 10/2018: Presented my position paper at the [BELIV](https://beliv-workshop.github.io/schedule.html) workshop.
 - 08/2018: APA annual convention @ San Francisco.
-- 06/2018: [SIPS](https://www.improvingpsych.org/SIPS2018/) @ Grand Rapids.
+
+<!-- - 06/2018: [SIPS](https://www.improvingpsych.org/SIPS2018/) @ Grand Rapids.
 - 04/2018: First time at CHI!
-- 02/2018: Social and Behavioral Sciences Research Initiative (SBSRI) workshop at UIUC.
+- 02/2018: Social and Behavioral Sciences Research Initiative (SBSRI) workshop at UIUC. -->
