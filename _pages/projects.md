@@ -23,20 +23,21 @@ _Read the eight-page version [here]({{"/files/beliv2018_forking_paths.pdf"}})._
 
 ## Understanding preregistration  
 
+(Under construction)
 
-The replication crisis—a failure to replicate foundational studies—has sparked a conversation in psychology, HCI, and beyond about scientific reliability. To address the crisis, researchers increasingly adopt preregistration: the practice of documenting research plans before conducting a study. We view preregistration, often an online form/template, as a user-centered design problem to ensure preregistration achieves its intended goal.
+<!-- The replication crisis—a failure to replicate foundational studies—has sparked a conversation in psychology, HCI, and beyond about scientific reliability. To address the crisis, researchers increasingly adopt preregistration: the practice of documenting research plans before conducting a study. We view preregistration, often an online form/template, as a user-centered design problem to ensure preregistration achieves its intended goal. -->
 
 ----
 
 
 
-# Undergraduate projects
+<!-- # Undergraduate projects
 
 
 ## Visualizing the comparison among climate model ensemble members
 
-<!-- ![1]({{"/assets/images/ncar.JPG"}})
-_View outside of my NCAR office._ -->
+![1]({{"/assets/images/ncar.JPG"}})
+_View outside of my NCAR office._ 
 
 In 2016, I interned at the National Center for Atmospheric Research (NCAR) and worked with Dr. Rick Brownrigg. (In addition to the Rockies), I explored the problem of visually representing climate model similarities. I worked with climate scientists and appreciated more how intricate and powerful climate models are.
 
@@ -47,7 +48,7 @@ In 2015, I worked with Professor Evan Peck in Computer Science on a project abou
 ## Geochemistry
 
 As a college freshman, I dabbled in geochemistry with Professor Carl Kirby in Geology & Environmental Geosciences.
-
+ -->
 
 <!-- - __@ NCAR__ (2016):
 - I interned at the National Center for Atmospheric Research (NCAR) and worked with Dr. Rick Brownrigg. (In addition to the Rockies,) I explored the problem of  presenting climate model similarities.
