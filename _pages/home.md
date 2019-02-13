@@ -22,11 +22,17 @@ I am a Ph.D. student in Computer Science and Engineering at the University of Mi
 My CV is [here]({{"files/pu_cv.pdf"}}).
 
 
-### Publication
+### Publications
 
-_The Garden of Forking Paths in Visualization: A Design Space for Reliable Exploratory Visual Analytics_ (BELIV 2018).
+_The Garden of Forking Paths in Visualization: A Design Space for Reliable Exploratory Visual Analytics_ (VIS 2018 BELIV Workshop).
 
  _Xiaoying Pu_, Matthew Kay   [[PDF]({{"/files/beliv2018_forking_paths.pdf"}})]
+
+
+
+_Designing for Preregistration: A User-Centered Perspective_ (CHI 2019 Late Breaking Work)
+
+_Xiaoying Pu_, Licheng Zhu, Matthew Kay, Fred Conrad
 
 <!-- ![Bucknell computing center]({{ "/assets/img/cover.jpeg" | absolute_url }})   -->
 
