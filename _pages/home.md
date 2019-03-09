@@ -24,7 +24,7 @@ My CV is [here]({{"files/pu_cv.pdf"}}).
 
 ### Publications
 
-_Designing for Preregistration: A User-Centered Perspective_ (CHI 2019 Late Breaking Work). _Xiaoying Pu_, Licheng Zhu, Matthew Kay, Fred Conrad. [[PDF]({{"/files/chi2019_lwbb_prereg.pdf"}})]
+_Designing for Preregistration: A User-Centered Perspective_ (CHI 2019 Late Breaking Work). _Xiaoying Pu_, Licheng Zhu, Matthew Kay, Fred Conrad. [[PDF]({{"/files/chi2019_lbw_prereg.pdf"}})]
 
 
 _The Garden of Forking Paths in Visualization: A Design Space for Reliable Exploratory Visual Analytics_ (VIS 2018 BELIV Workshop). _Xiaoying Pu_, Matthew Kay.   [[PDF]({{"/files/beliv2018_forking_paths.pdf"}})]
