@@ -45,7 +45,7 @@ _The Garden of Forking Paths in Visualization: A Design Space for Reliable Explo
 
 - 05/2019: CHI 2019 in Glasgow, UK! Presenting a poster about preregistration.
 - 04/2019: participated in the CRA-W Grad Cohort in Chicago.
-- 03/2019: will start a summer internship at the National Renewable Energy Laboratory (NREL) in Golden, CO.
+- 03/2019: will spend the summer at the National Renewable Energy Laboratory (NREL) in Golden, CO.
 
 <!-- ![Bucknell computing center]({{ "/assets/img/cover.jpeg" | absolute_url }})   -->
 <!--
