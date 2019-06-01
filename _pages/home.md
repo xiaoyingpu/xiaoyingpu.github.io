@@ -10,7 +10,7 @@ sidebar:
 
 I am a Ph.D. student in Computer Science and Engineering at the University of Michigan. I work with Professor [Matthew Kay](http://mjskay.com/) in the School of Information.
 
-I take a human-centered approach to communicating uncertainty and statistical information with information visualizations. I also have a keen interest in adopting and improving open science practices, such as preregistration.
+I take a human-centered approach to communicating uncertainty and statistics with information visualizations. I also have a keen interest in adopting and improving open science practices, such as preregistration.
  <!-- Specifically, I design and evaluate visualizations to make them statistically reliable. Relatedly, I look at what uncertainty visualizations work best.  -->
 Across my projects, I have used a wide range of methods, such as system-building, participant experiments, and qualitative interviews.
 
@@ -32,7 +32,6 @@ My CV is [here]({{"files/pu_cv.pdf"}}).
 ### Publications
 
 
-> LBW0257. See the poster at Board 5, Poster 8, Hall 4.
 
 
 _Designing for Preregistration: A User-Centered Perspective_ (CHI 2019 Late Breaking Work). _Xiaoying Pu_, Licheng Zhu, Matthew Kay, Fred Conrad. [[PDF]({{"/files/chi2019_lbw_prereg.pdf"}})]
