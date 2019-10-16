@@ -10,9 +10,11 @@ sidebar:
 
 I am a Ph.D. student in Computer Science and Engineering at the University of Michigan. I work with Professor [Matthew Kay](http://mjskay.com/) in the School of Information.
 
-I take a human-centered approach to communicating uncertainty and statistics with information visualizations. I also have a keen interest in adopting and improving open science practices, such as preregistration.
+I take a human-centered approach to communicating uncertainty and statistics with information visualizations. Through my internships at two national labs, I have applied my research interests to challenges I care about --- climate change and renewable energy.
+I also have a keen interest in adopting and improving open science practices, such as preregistration.
  <!-- Specifically, I design and evaluate visualizations to make them statistically reliable. Relatedly, I look at what uncertainty visualizations work best.  -->
-Across my projects, I have used a wide range of methods, such as system-building, participant experiments, and qualitative interviews.
+
+Across my projects, I have used a wide range of methods, such as system-building, participant experiments & statistical analyses, and qualitative interviews.
 
 
 
@@ -40,11 +42,12 @@ _Designing for Preregistration: A User-Centered Perspective_ (CHI 2019 Late Brea
 _The Garden of Forking Paths in Visualization: A Design Space for Reliable Exploratory Visual Analytics_ (VIS 2018 BELIV Workshop). _Xiaoying Pu_, Matthew Kay.   [[PDF]({{"/files/beliv2018_forking_paths.pdf"}})]
 
 
-### News
+### Recent-ish News
 
+- 10/2019: Presenting at the Application Spotlight at IEEE VIS 2019 in Vancouver, BC.
+- 05/2019: Visualization internship at the National Renewable Energy Laboratory (NREL) in Golden, CO.
 - 05/2019: CHI 2019 in Glasgow, UK! Presenting a poster about preregistration.
 - 04/2019: participated in the CRA-W Grad Cohort in Chicago.
-- 03/2019: will spend the summer at the National Renewable Energy Laboratory (NREL) in Golden, CO.
 
 <!-- ![Bucknell computing center]({{ "/assets/img/cover.jpeg" | absolute_url }})   -->
 <!--
