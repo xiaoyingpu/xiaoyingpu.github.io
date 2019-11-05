@@ -6,7 +6,7 @@ title: "Current and Past Projects"
 # header:
   # overlay_image: /assets/images/cover.jpeg
   # image_description: "Photo I took outside of Bucknell's Computer Center"
-# toc: true
+toc: true
 ---
 
 
