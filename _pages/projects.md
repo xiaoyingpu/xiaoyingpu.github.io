@@ -6,10 +6,22 @@ title: "Current and Past Projects"
 # header:
   # overlay_image: /assets/images/cover.jpeg
   # image_description: "Photo I took outside of Bucknell's Computer Center"
+toc: true
 ---
 
 
+## Munker-White illusion for exploring data
 
+I interned at NREL last summer. Among other prototyping I did for power system integration simulation data, I played with the Munker-White Illustion to show an overview these data. 
+
+![Summary]({{"/assets/images/nrel_slides_illusion.png"}})
+
+Is it really helpful for the domain scientists? I'm working on it.
+
+
+## A probabilistic Grammar of Graphics 
+
+![]({{"/assets/images/density_new.png"}})
 
 
 ## The garden of statistically reliable visualizations
@@ -17,6 +29,7 @@ title: "Current and Past Projects"
 > In this garden of forking paths, whatever route you take seems predetermined, but that’s because the choices are done implicitly.
 — Gelman and Loken, 2013
 
+![]({{"/assets/images/garden.png"}})
 
 Visual analytics tools should no longer be a garden to harvest interesting but probably unreliable patterns. We should consider a wide range of statistical corrections and visual representations to help analysts perform exploratory data analysis (EDA) reliably. There is an exciting new _design space_ for such reliable analytics that's yet to be fully explored.
 
@@ -27,6 +40,9 @@ _Read the eight-page version [here]({{"/files/beliv2018_forking_paths.pdf"}})._
 
 ## Understanding preregistration  
 
+{% figure caption:"Preregistration workflow" %}
+![]({{"/assets/images/prereg.png"}}){: .align-left}
+{% endfigure %}
 
 The replication crisis—a failure to replicate foundational studies—has sparked a conversation in psychology, HCI, and beyond about scientific reliability. To address the crisis, researchers increasingly adopt preregistration: the practice of documenting research plans before conducting a study. We view preregistration, often an online form/template, as a user-centered design problem to ensure preregistration achieves its intended goal.
 
