@@ -40,9 +40,8 @@ _Read the eight-page version [here]({{"/files/beliv2018_forking_paths.pdf"}})._
 
 ## Understanding preregistration  
 
-{% figure caption:"Preregistration workflow" %}
-![]({{"/assets/images/prereg.png"}}){: .align-left}
-{% endfigure %}
+![]({{"/assets/images/prereg.png"}})
+
 
 The replication crisis—a failure to replicate foundational studies—has sparked a conversation in psychology, HCI, and beyond about scientific reliability. To address the crisis, researchers increasingly adopt preregistration: the practice of documenting research plans before conducting a study. We view preregistration, often an online form/template, as a user-centered design problem to ensure preregistration achieves its intended goal.
 
