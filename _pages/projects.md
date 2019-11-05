@@ -6,7 +6,7 @@ title: "Current and Past Projects"
 # header:
   # overlay_image: /assets/images/cover.jpeg
   # image_description: "Photo I took outside of Bucknell's Computer Center"
-toc: true
+# toc: true
 ---
 
 
@@ -14,7 +14,7 @@ toc: true
 
 I interned at NREL last summer. Among other prototyping I did for power system integration simulation data, I played with the Munker-White Illustion to show an overview these data. 
 
-![Summary]({{"/assets/images/nrel_slides_illusion.png"}})
+![]({{"/assets/images/nrel_slides_illusion.png"}})
 
 Is it really helpful for the domain scientists? I'm working on it.
 
