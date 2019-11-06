@@ -12,17 +12,20 @@ toc: true
 
 ## Munker-White illusion for exploring data
 
-I interned at NREL last summer. Among other prototyping I did for power system integration simulation data, I played with the Munker-White Illustion to show an overview these data. 
+I interned at NREL last summer. Among other prototyping I did for power system integration simulation data, I played with the Munker-White Illustion to show an overview of these data. 
 
 ![]({{"/assets/images/nrel_slides_illusion.png"}})
 
-Is it really helpful for the domain scientists? I'm working on it.
+_Is it really helpful for the domain scientists? I'm working on it._
 
 
 ## A probabilistic Grammar of Graphics 
 
 ![]({{"/assets/images/density_new.png"}})
 
+Turning a probability distribution into a visualization can be difficult and even error-prone, a lesson I learned from googling and overwriting default arugments to `geom_density` in `ggplot2`. The _Probabilistic Grammar of Graphics_ promises to make our lives easier by using probability expressions like `P(A|B)` as data variables. The design of this GoG extension also corresponds nicely to uncertainty communication theories, and may help explore and formalize the space of uncertainty visualizations.
+
+_Under review._
 
 ## The garden of statistically reliable visualizations
 
