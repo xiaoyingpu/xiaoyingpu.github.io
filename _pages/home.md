@@ -10,7 +10,7 @@ sidebar:
 
 I am a Ph.D. student in Computer Science and Engineering at the University of Michigan. I work with Professor [Matthew Kay](http://mjskay.com/) in the School of Information.
 
-I take a human-centered approach to communicating uncertainty and statistics with information visualizations. Through my internships at two national labs, I have applied my research interests to challenges I care about --- climate change and renewable energy.
+I take a human-centered approach to communicating uncertainty and statistics with visualizations. Through my internships at two national labs, I have applied my research interests to challenges I care about --- climate change and renewable energy.
 I also have a keen interest in adopting and improving open science practices, such as preregistration.
  <!-- Specifically, I design and evaluate visualizations to make them statistically reliable. Relatedly, I look at what uncertainty visualizations work best.  -->
 
@@ -44,8 +44,8 @@ _The Garden of Forking Paths in Visualization: A Design Space for Reliable Explo
 
 ### Recent-ish News
 
-- 10/2019: Presenting at the Application Spotlight at IEEE VIS 2019 in Vancouver, BC.
-- 05/2019: Visualization internship at the National Renewable Energy Laboratory (NREL) in Golden, CO.
+- 10/2019: Presented at the Application Spotlight at IEEE VIS 2019 in Vancouver, BC.
+- 05/2019: Visualization internship with Dr. Kristi Potter at the National Renewable Energy Laboratory (NREL) in Golden, CO.
 - 05/2019: CHI 2019 in Glasgow, UK! Presenting a poster about preregistration.
 - 04/2019: participated in the CRA-W Grad Cohort in Chicago.
 
