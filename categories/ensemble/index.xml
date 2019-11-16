@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ensemble on Xiaoying Pu</title>
+    <link>/categories/ensemble/</link>
+    <description>Recent content in ensemble on Xiaoying Pu</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 01 May 2016 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/categories/ensemble/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>🏔  Climate model ensemble similarity comparisons</title>
+      <link>/projects/ncar/</link>
+      <pubDate>Sun, 01 May 2016 00:00:00 +0000</pubDate>
+      
+      <guid>/projects/ncar/</guid>
+      <description>SIParCS internship at the National Center for Atmospheric Research (NCAR). Worked with Dr. Rick Brownrigg.</description>
+    </item>
+    
+  </channel>
+</rss>

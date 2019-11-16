@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>experiment on Xiaoying Pu</title>
+    <link>/tags/experiment/</link>
+    <description>Recent content in experiment on Xiaoying Pu</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 01 May 2015 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/experiment/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>🙇 Physiological computing</title>
+      <link>/projects/flyloop/</link>
+      <pubDate>Fri, 01 May 2015 00:00:00 +0000</pubDate>
+      
+      <guid>/projects/flyloop/</guid>
+      <description>worked with Professor Evan Peck in Computer Science on a project about using physiological signals to improve decision-making.</description>
+    </item>
+    
+  </channel>
+</rss>

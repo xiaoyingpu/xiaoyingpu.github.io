@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Xiaoying Pu</title>
+    <link>/</link>
+    <description>Recent content on Xiaoying Pu</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 16 Sep 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>📊  A Probabilistic Grammar of Graphics</title>
+      <link>/projects/pgog/</link>
+      <pubDate>Mon, 16 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/projects/pgog/</guid>
+      <description>Turning a probability distribution into a visualization used to be difficult and even error-prone, but not anymore.</description>
+    </item>
+    
+    <item>
+      <title>⚡️ Uncertainty vizes for power grid simulations</title>
+      <link>/projects/nrel/</link>
+      <pubDate>Fri, 16 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/projects/nrel/</guid>
+      <description>Visualization internship with Dr. Kristi Potter at NREL.</description>
+    </item>
+    
+    <item>
+      <title>🚙 Spy: your car is tracking you</title>
+      <link>/projects/spy/</link>
+      <pubDate>Tue, 01 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/projects/spy/</guid>
+      <description>Inferring geolocation from innocuous car data</description>
+    </item>
+    
+    <item>
+      <title>🌳   The garden of statistically reliable visualizations</title>
+      <link>/projects/garden/</link>
+      <pubDate>Tue, 16 Oct 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/projects/garden/</guid>
+      <description>
+
+
+&lt;p&gt;Visual analytics tools should no longer be a garden to harvest interesting but probably unreliable patterns.
+</description>
+    </item>
+    
+    <item>
+      <title>🧻  Understanding preregistration</title>
+      <link>/projects/prereg/</link>
+      <pubDate>Tue, 16 Oct 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/projects/prereg/</guid>
+      <description>More researchers are adopting prereigstration, but are current tools serving them well?</description>
+    </item>
+    
+    <item>
+      <title>🏔  Climate model ensemble similarity comparisons</title>
+      <link>/projects/ncar/</link>
+      <pubDate>Sun, 01 May 2016 00:00:00 +0000</pubDate>
+      
+      <guid>/projects/ncar/</guid>
+      <description>SIParCS internship at the National Center for Atmospheric Research (NCAR). Worked with Dr. Rick Brownrigg.</description>
+    </item>
+    
+    <item>
+      <title>🙇 Physiological computing</title>
+      <link>/projects/flyloop/</link>
+      <pubDate>Fri, 01 May 2015 00:00:00 +0000</pubDate>
+      
+      <guid>/projects/flyloop/</guid>
+      <description>worked with Professor Evan Peck in Computer Science on a project about using physiological signals to improve decision-making.</description>
+    </item>
+    
+    <item>
+      <title>⚗️ Mussels and hydraulic fracturing</title>
+      <link>/projects/geochem/</link>
+      <pubDate>Thu, 01 May 2014 00:00:00 +0000</pubDate>
+      
+      <guid>/projects/geochem/</guid>
+      <description>&lt;p&gt;As a freshman, I dabbled in geochemistry with Professor Carl Kirby in Geology &amp;amp; Environmental Geosciences at Bucknell University.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
