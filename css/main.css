@@ -25,6 +25,15 @@ a {
   outline: none;
 }
 
+figure {
+  text-align: left;
+  font-style: italic;
+  font-size: smaller;
+  /* text-indent: 0; */
+  /* margin: 0; */
+  /* padding: 0; */
+}
+
 code {
   background-color: rgba(0, 0, 0, 0.02);
 }
