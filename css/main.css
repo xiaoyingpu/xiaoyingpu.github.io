@@ -217,12 +217,11 @@ code {
   /* border-bottom: 1px solid #ddd; */
 }
 
-.article-content a:hover,
-
+/* .article-content a:hover, */
 .archive-item-link:hover {
-  /* border-bottom-color: #222; */
-  border-bottom: 3px solid #CBF8DF;
-  box-shadow: inset 0 -4px 0 #CBF8DF;
+  border-bottom-color: #222;
+  /* border-bottom: 1px solid #CBF8DF; */
+  /* box-shadow: inset 0 -4px 0 #CBF8DF; */
 }
 
 .footer {
