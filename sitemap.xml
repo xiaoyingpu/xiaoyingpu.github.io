@@ -3,6 +3,31 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>/note/</loc>
+    <lastmod>2019-11-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/note/cheat/</loc>
+    <lastmod>2019-11-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/r/</loc>
+    <lastmod>2019-11-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/</loc>
+    <lastmod>2019-11-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/</loc>
+    <lastmod>2019-11-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/tags/design/</loc>
     <lastmod>2019-09-16T00:00:00+00:00</lastmod>
   </url>
@@ -13,22 +38,12 @@
   </url>
   
   <url>
-    <loc>/projects/</loc>
+    <loc>/project/</loc>
     <lastmod>2019-09-16T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/tags/</loc>
-    <lastmod>2019-09-16T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/</loc>
-    <lastmod>2019-09-16T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/projects/pgog/</loc>
+    <loc>/project/pgog/</loc>
     <lastmod>2019-09-16T00:00:00+00:00</lastmod>
   </url>
   
@@ -43,7 +58,7 @@
   </url>
   
   <url>
-    <loc>/projects/nrel/</loc>
+    <loc>/project/nrel/</loc>
     <lastmod>2019-08-16T00:00:00+00:00</lastmod>
   </url>
   
@@ -63,7 +78,7 @@
   </url>
   
   <url>
-    <loc>/projects/spy/</loc>
+    <loc>/project/spy/</loc>
     <lastmod>2019-01-01T00:00:00+00:00</lastmod>
   </url>
   
@@ -78,13 +93,23 @@
   </url>
   
   <url>
-    <loc>/projects/garden/</loc>
+    <loc>/project/garden/</loc>
     <lastmod>2018-10-16T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/projects/prereg/</loc>
+    <loc>/project/prereg/</loc>
     <lastmod>2018-10-16T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/experiment/</loc>
+    <lastmod>2017-12-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/project/risk-theatre/</loc>
+    <lastmod>2017-12-20T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -93,22 +118,17 @@
   </url>
   
   <url>
-    <loc>/projects/ncar/</loc>
+    <loc>/project/ncar/</loc>
     <lastmod>2016-05-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/tags/experiment/</loc>
+    <loc>/project/flyloop/</loc>
     <lastmod>2015-05-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/projects/flyloop/</loc>
-    <lastmod>2015-05-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/projects/geochem/</loc>
+    <loc>/project/geochem/</loc>
     <lastmod>2014-05-01T00:00:00+00:00</lastmod>
   </url>
   

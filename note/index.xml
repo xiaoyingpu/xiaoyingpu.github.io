@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Notes on Xiaoying Pu</title>
+    <link>/note/</link>
+    <description>Recent content in Notes on Xiaoying Pu</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 20 Nov 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/note/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Personal R cheatsheet</title>
+      <link>/note/cheat/</link>
+      <pubDate>Wed, 20 Nov 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/note/cheat/</guid>
+      <description>  Update NAMESPACE: devtools::document() Local check for travis: devtools::check(remote = TRUE) left_join, full_join, etc: merging two tables crossing: all combination of values; expand?  </description>
+    </item>
+    
+  </channel>
+</rss>

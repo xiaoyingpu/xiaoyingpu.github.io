@@ -12,11 +12,11 @@
     
     
     <item>
-      <title>🚙 Spy: your car is tracking you</title>
-      <link>/projects/spy/</link>
+      <title>🚙 Your car is tracking you</title>
+      <link>/project/spy/</link>
       <pubDate>Tue, 01 Jan 2019 00:00:00 +0000</pubDate>
       
-      <guid>/projects/spy/</guid>
+      <guid>/project/spy/</guid>
       <description>Inferring geolocation from innocuous car data.</description>
     </item>
     

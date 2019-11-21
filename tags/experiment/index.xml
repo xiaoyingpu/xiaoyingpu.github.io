@@ -6,17 +6,26 @@
     <description>Recent content in experiment on Xiaoying Pu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 01 May 2015 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 20 Dec 2017 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/tags/experiment/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>🎭    Does Risk Theatre work?</title>
+      <link>/project/risk-theatre/</link>
+      <pubDate>Wed, 20 Dec 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/project/risk-theatre/</guid>
+      <description>Risk theatre is a variant of icon arrays, where we color the seat map of a theatre according to some proportion we want to communicate.</description>
+    </item>
+    
+    <item>
       <title>🙇 Physiological computing</title>
-      <link>/projects/flyloop/</link>
+      <link>/project/flyloop/</link>
       <pubDate>Fri, 01 May 2015 00:00:00 +0000</pubDate>
       
-      <guid>/projects/flyloop/</guid>
+      <guid>/project/flyloop/</guid>
       <description>I worked with Professor Evan Peck at Bucknell on a project about using physiological signals to improve decision-making.</description>
     </item>
     
