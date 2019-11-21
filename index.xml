@@ -35,7 +35,7 @@
       <pubDate>Fri, 16 Aug 2019 00:00:00 +0000</pubDate>
       
       <guid>/project/nrel/</guid>
-      <description>Visualization internship with Dr. Kristi Potter at NREL.</description>
+      <description>Visualization internship with Dr. Kristi Potter at the National Renewable Energy Laboratory.</description>
     </item>
     
     <item>
@@ -48,21 +48,21 @@
     </item>
     
     <item>
-      <title>🌳   The garden of statistically reliable visualizations</title>
-      <link>/project/garden/</link>
-      <pubDate>Tue, 16 Oct 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/project/garden/</guid>
-      <description>Visual analytics tools should no longer be a garden to harvest interesting but probably unreliable patterns.</description>
-    </item>
-    
-    <item>
       <title>🧻  Understanding preregistration</title>
       <link>/project/prereg/</link>
       <pubDate>Tue, 16 Oct 2018 00:00:00 +0000</pubDate>
       
       <guid>/project/prereg/</guid>
       <description>More researchers are adopting prereigstration, but are current tools serving them well?</description>
+    </item>
+    
+    <item>
+      <title>🌳   The garden of statistically reliable visualizations</title>
+      <link>/project/garden/</link>
+      <pubDate>Thu, 16 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/project/garden/</guid>
+      <description>Visual analytics tools should no longer be a garden to harvest interesting but probably unreliable patterns.</description>
     </item>
     
     <item>
