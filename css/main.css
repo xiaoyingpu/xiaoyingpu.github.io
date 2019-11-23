@@ -287,7 +287,14 @@ code {
 
   .nav-links li {
     margin: 0 0 0 30px;
+    border-bottom: 1px solid #fff;
+    transition: color 150ms ease;
   }
+
+  .nav-links li:hover{
+    border-bottom-color: #222;
+  }
+
 
   .content {
     font-size: 19px;
