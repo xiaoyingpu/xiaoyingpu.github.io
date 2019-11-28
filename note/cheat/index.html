@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:600|PT+Sans|PT+Serif|Roboto+Slab:400.800|Merriweather&display=swap" rel="stylesheet">
+    <link rel="stylesheet" src="//normalize-css.googlecode.com/svn/trunk/normalize.css" />
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Hugo 0.59.1" />
+
+
+<title>R formulas - Xiaoying Pu</title>
+<meta property="og:title" content="R formulas - Xiaoying Pu">
+
+
+  <link href='/favicon.ico' rel='icon' type='image/x-icon'/>
+
+
+
+  
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/css/fonts.css" media="all">
+<link rel="stylesheet" href="/css/main.css" media="all">
+
+
+
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <nav class="nav">
+  <a href="/" class="nav-logo">
+    <img src="/images/logo.png"
+         width="50"
+         height="50"
+         alt="Logo">
+  </a>
+
+  <ul class="nav-links">
+    
+    <li><a href="/">Home</a></li>
+    
+    <li><a href="/project/">Projects</a></li>
+    
+    <li><a href="/about/">Personal</a></li>
+    
+  </ul>
+</nav>
+
+      </header>
+
+
+<main class="content" role="main">
+
+  <article class="article">
+
+
+    <h1 class="article-title">R formulas</h1>
+
+    
+
+    
+    
+
+    <div class="article-content">
+      
+
+<div id="TOC">
+<ul>
+<li><a href="#summary">Summary</a><ul>
+<li><a href="#formula-components">Formula components</a></li>
+<li><a href="#incremental-examples">Incremental examples</a><ul>
+<li><a href="#s"><code>1+(1|s)</code></a></li>
+<li><a href="#x1s"><code>x+(1|s)</code></a></li>
+<li><a href="#x0xs1s"><code>x+(0+x|s)+(1|s)</code></a></li>
+<li><a href="#x1xs"><code>x+(1+x|s)</code></a></li>
+</ul></li>
+</ul></li>
+<li><a href="#resources">Resources</a></li>
+</ul>
+</div>
+
+<blockquote>
+<p><em>Notes for figuring out how to read/write those R formulas used in <code>lmer</code>, <code>brms</code>, etc.</em></p>
+</blockquote>
+<div id="summary" class="section level1">
+<h1>Summary</h1>
+<div id="formula-components" class="section level2">
+<h2>Formula components</h2>
+<ul>
+<li>Form: <code>dependent ~ independent | grouping</code></li>
+<li><code>1</code>: intercept, often omitted when there’s another predictor. So <code>(1+x|g)</code> is the same as <code>(x|g)</code>.</li>
+<li><code>+</code>: no interaction</li>
+<li><code>*</code>: interaction</li>
+<li><code>()</code>: random factor things
+<ul>
+<li><code>(1 | random)</code>: random group intercepts only</li>
+<li><code>(0 + fixed | random) = (-1 + fixed | random)</code>: random slopes only</li>
+<li><code>(0 + fixed | random) + (1 | random)</code>: random slopes and intercepts, independent. Alternatively: <code>(fixed || random)</code>.</li>
+<li><code>(1 + fixed | random) = (fixed | random)</code>: correlated random slopes and intercepts, see below for the correlation coefficients.</li>
+</ul></li>
+<li>TODO: <code>:</code>, …</li>
+</ul>
+</div>
+<div id="incremental-examples" class="section level2">
+<h2>Incremental examples</h2>
+<blockquote>
+<p>Note: <code>s</code> stands for subject/grouping parameter</p>
+</blockquote>
+<div id="s" class="section level3">
+<h3><code>1+(1|s)</code></h3>
+<ul>
+<li>Not a mixed-effects model</li>
+<li>Estimates <em>two</em> parameters, <span class="math inline">\(\beta_0\)</span> and <span class="math inline">\(\beta_1\)</span></li>
+<li><span class="math inline">\(Y_{si} = \beta_0 + \beta_1 X_i + e_{si}\)</span></li>
+</ul>
+</div>
+<div id="x1s" class="section level3">
+<h3><code>x+(1|s)</code></h3>
+<ul>
+<li>Random intercepts, fixed slopes</li>
+<li>Estimates three parameters:
+<ol style="list-style-type: decimal">
+<li>A global intercept, <span class="math inline">\(\beta_0\)</span></li>
+<li>A global estimate for the fixed effect (slope) of <code>x</code>, <span class="math inline">\(\beta_1\)</span></li>
+<li>How much the intercepts for levels in <code>s</code> deviate from the global intercept, <span class="math inline">\(\sigma_{00}\)</span>.</li>
+</ol></li>
+<li><span class="math inline">\(Y_{si} = (\beta_0 + S_{0s}) + \beta_1 X_i + e_{si}\)</span>
+<ul>
+<li><span class="math inline">\(S_{0s} \sim N(0, \sigma_{00}^2)\)</span></li>
+</ul></li>
+</ul>
+</div>
+<div id="x0xs1s" class="section level3">
+<h3><code>x+(0+x|s)+(1|s)</code></h3>
+<ul>
+<li>Independent random slopes and intercepts</li>
+<li>Estmiates four paramters:
+<ol style="list-style-type: decimal">
+<li>A global intercept, <span class="math inline">\(\beta_0\)</span></li>
+<li>A global estimate for the fixed effect (slope) of <code>x</code>, <span class="math inline">\(\beta_1\)</span></li>
+<li>How much the intercepts for levels in <code>s</code> deviate from the global intercept, <span class="math inline">\(\sigma_{00}\)</span>.</li>
+<li>How much the slopes for levels in <code>s</code> deviate from the global slope <span class="math inline">\(\beta_1\)</span>, <span class="math inline">\(\sigma_{11}\)</span>. Or how much the effect of <code>x</code> within each level of <code>s</code> deviates from the global effect of <code>x</code>.</li>
+</ol></li>
+<li>Note that <span class="math inline">\(S_{0s}\)</span> and <span class="math inline">\(S_{1s}\)</span> are drawn from two independent distributions with different variances.</li>
+<li><span class="math inline">\(Y_{si} = (\beta_0 + S_{0s}) + (\beta_1 + S_{1s}) X_i + e_{si}\)</span>
+<ul>
+<li><span class="math inline">\(S_{0s} \sim N(0, \sigma_{00}^2)\)</span></li>
+<li><span class="math inline">\(S_{1s} \sim N(0, \sigma_{11}^2)\)</span></li>
+</ul></li>
+</ul>
+</div>
+<div id="x1xs" class="section level3">
+<h3><code>x+(1+x|s)</code></h3>
+<ul>
+<li>Correlated random slopes and intercepts</li>
+<li>Estmiates four paramters:
+<ol style="list-style-type: decimal">
+<li>A global intercept, <span class="math inline">\(\beta_0\)</span></li>
+<li>A global estimate for the fixed effect (slope) of <code>x</code>, <span class="math inline">\(\beta_1\)</span></li>
+<li>How much the intercepts for levels in <code>s</code> deviate from the global intercept, <span class="math inline">\(\sigma_{00}\)</span>.</li>
+<li>How much the slopes for levels in <code>s</code> deviate from the global slope <span class="math inline">\(\beta_1\)</span>, <span class="math inline">\(\sigma_{11}\)</span>. Or how much the effect of <code>x</code> within each level of <code>s</code> deviates from the global effect of <code>x</code>.</li>
+<li>Correlation between intercepts <span class="math inline">\(S_{0s}\)</span> and slopes <span class="math inline">\(S_{1s}\)</span>, <span class="math inline">\(\sigma_{01}\)</span>.</li>
+</ol></li>
+<li><span class="math inline">\(Y_{si} = (\beta_0 + S_{0s}) + (\beta_1 + S_{1s}) X_i + e_{si}\)</span>. Same as above, but
+<ul>
+<li><span class="math inline">\(\begin{pmatrix}S_{0s} \\ S_{1s}\end{pmatrix} \sim \begin{pmatrix} 0 \\ 0 \end{pmatrix},\begin{pmatrix} \sigma_{00}^2 &amp; \sigma_{01}\\ \sigma_{01} &amp; \sigma_{11}^2 \end{pmatrix}\)</span></li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="resources" class="section level1">
+<h1>Resources</h1>
+<ul>
+<li><a href="https://stats.stackexchange.com/questions/13166/rs-lmer-cheat-sheet">lmer cheat sheet | stackoverflow</a></li>
+<li><a href="http://www.rensenieuwenhuis.nl/r-sessions-16-multilevel-model-specification-lme4/">R-Sessions 16: Multilevel Model Specification (lme4)</a></li>
+<li><a href="https://rpsychologist.com/r-guide-longitudinal-lme-lmer">Using R and lme/lmer to fit different two- and three-level longitudinal models - R Psychologist</a></li>
+<li><a href="http://bbolker.github.io/mixedmodels-misc/glmmFAQ.html#model-specification">GLMM FAQ</a></li>
+<li><a href="https://arxiv.org/pdf/1406.5823.pdf">Fitting linear mixed-effects models using lme4</a></li>
+<li>Barr, Dale J, R. Levy, C. Scheepers und H. J. Tily (2013). <em>Random effects structure for confirmatory hypothesis testing: Keep it maximal</em>. Journal of Memory and Language, 68:255– 278.</li>
+</ul>
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-1"></span>
+<img src="/images/lme4.png" alt="[Fitting linear mixed-effects models using lme4](https://arxiv.org/pdf/1406.5823.pdf)" width="100%" />
+<p class="caption">
+Figure 1: <a href="https://arxiv.org/pdf/1406.5823.pdf">Fitting linear mixed-effects models using lme4</a>
+</p>
+</div>
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-2"></span>
+<img src="/images/barr_2013.png" alt="Barr et al. 2013" width="100%" />
+<p class="caption">
+Figure 2: Barr et al. 2013
+</p>
+</div>
+</div>
+
+    </div>
+  </article>
+
+  
+
+
+</main>
+
+      <footer class="footer">
+        <ul class="footer-links">
+          <li>
+            <a href="/">Xiaoying Pu © 2019</a>
+          </li>
+          <li>
+            <a href="https://gohugo.io/" class="footer-links-kudos">Made with blogdown and <img src="/images/hugo-logo.png" alt="Img link to Hugo website" width="22" height="22"></a>
+          </li>
+        </ul>
+      </footer>
+
+    </div>
+    
+
+    
+<script src="/js/math-code.js"></script>
+<script async src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+
+    
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-117939615-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+  </body>
+</html>
+

@@ -1,0 +1,15 @@
+---
+title: "R formulas"
+author: Xiaoying Pu
+date: '2019-11-20'
+slug: cheat
+categories: []
+tags: [R]
+---
+
+Resources I used to figure out how to read/write those R formulas used in `lme4`, `brms`, etc. 
+
+
+- [Using R and lme/lmer to fit different two- and three-level longitudinal models - R Psychologist](https://rpsychologist.com/r-guide-longitudinal-lme-lmer)
+- [GLMM FAQ](http://bbolker.github.io/mixedmodels-misc/glmmFAQ.html#model-specification)
+- [Fitting linear mixed-effects models using lme4](https://arxiv.org/pdf/1406.5823.pdf)

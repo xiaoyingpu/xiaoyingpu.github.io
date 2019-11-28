@@ -40,6 +40,14 @@ code {
   background-color: rgba(0, 0, 0, 0.02);
 }
 
+
+aside{
+  float: left;
+  display: block;
+  position: relative;
+}
+
+
 .wrapper {
   overflow: hidden;
   position: relative;
