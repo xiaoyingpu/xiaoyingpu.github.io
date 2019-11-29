@@ -37,7 +37,7 @@ figure {
 }
 
 code {
-  background-color: rgba(0, 0, 0, 0.02);
+  background-color: rgba(0, 0, 0, 0.05);
 }
 
 
@@ -190,6 +190,7 @@ aside{
 .archive-title {
   font-size: 32px;
   margin-top: 60px;
+  margin-bottom: 20px;
 }
 
 .archive-item {
@@ -319,7 +320,7 @@ aside{
   }
 
   .archive-title {
-    font-size: 38px;
+    /* font-size: 38px; */
   }
 
   .archive-item-date {

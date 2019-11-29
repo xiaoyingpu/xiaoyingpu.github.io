@@ -73,7 +73,9 @@
 <div id="TOC">
 <ul>
 <li><a href="#summary">Summary</a><ul>
-<li><a href="#formula-components">Formula components</a></li>
+<li><a href="#formula-components">Formula components</a><ul>
+<li><a href="#group-level-terms">Group-level terms</a></li>
+</ul></li>
 <li><a href="#incremental-examples">Incremental examples</a><ul>
 <li><a href="#s"><code>1+(1|s)</code></a></li>
 <li><a href="#x1s"><code>x+(1|s)</code></a></li>
@@ -86,26 +88,36 @@
 </div>
 
 <blockquote>
-<p><em>Notes for figuring out how to read/write those R formulas used in <code>lmer</code>, <code>brms</code>, etc.</em></p>
+<p><em>Notes for figuring out how to read/write those R formulas used in <code>lmer</code> and <code>brms</code>.</em></p>
 </blockquote>
+<hr />
 <div id="summary" class="section level1">
 <h1>Summary</h1>
+<p><code>brms</code> accepts formulas in the form <code>response | aterms ~ pterms + (gterms | group)</code>.</p>
 <div id="formula-components" class="section level2">
 <h2>Formula components</h2>
 <ul>
-<li>Form: <code>dependent ~ independent | grouping</code></li>
+<li><code>aterms</code>: special <code>brms</code> syntax.</li>
+<li><code>pterms</code>: population-level terms</li>
+<li><code>gterms</code>: group-level terms</li>
+<li><code>group</code>: grouping factor</li>
 <li><code>1</code>: intercept, often omitted when there’s another predictor. So <code>(1+x|g)</code> is the same as <code>(x|g)</code>.</li>
-<li><code>+</code>: no interaction</li>
-<li><code>*</code>: interaction</li>
-<li><code>()</code>: random factor things
+</ul>
+<p>TODO: confusing frequentist language below:</p>
+<div id="group-level-terms" class="section level3">
+<h3>Group-level terms</h3>
+<p>There can be multiple group-level effects <code>gterms</code> and multiple grouping factors <code>group</code>.</p>
 <ul>
 <li><code>(1 | random)</code>: random group intercepts only</li>
 <li><code>(0 + fixed | random) = (-1 + fixed | random)</code>: random slopes only</li>
 <li><code>(0 + fixed | random) + (1 | random)</code>: random slopes and intercepts, independent. Alternatively: <code>(fixed || random)</code>.</li>
 <li><code>(1 + fixed | random) = (fixed | random)</code>: correlated random slopes and intercepts, see below for the correlation coefficients.</li>
+<li><code>(1 + gterms |&lt;ID&gt;| group)</code>: according to <code>brms</code> documentation, if there are multiple group-level terms <code>gterms</code> for the same factor <code>group</code>, we can choose to model the correlations among those <code>gterms</code>. This is possible for when those group-level terms are in different forumlas, say in a non-linear model. <code>|&lt;ID&gt;|</code> tags the grouping factor and all <code>gterms</code> with the same ID will be modeled as correlated.
+<ul>
+<li>Example: if the model says <code>(1+x|2|g)</code> and <code>(1+z|2|g)</code>, <code>brms</code> will estimate the correlation between the group-level effects of <code>x</code> and <code>z</code>.</li>
 </ul></li>
-<li>TODO: <code>:</code>, …</li>
 </ul>
+</div>
 </div>
 <div id="incremental-examples" class="section level2">
 <h2>Incremental examples</h2>
@@ -178,6 +190,7 @@
 <div id="resources" class="section level1">
 <h1>Resources</h1>
 <ul>
+<li><a href="http://paul-buerkner.github.io/brms/reference/brmsformula.html">Set up a model formula for use in brms</a></li>
 <li><a href="https://stats.stackexchange.com/questions/13166/rs-lmer-cheat-sheet">lmer cheat sheet | stackoverflow</a></li>
 <li><a href="http://www.rensenieuwenhuis.nl/r-sessions-16-multilevel-model-specification-lme4/">R-Sessions 16: Multilevel Model Specification (lme4)</a></li>
 <li><a href="https://rpsychologist.com/r-guide-longitudinal-lme-lmer">Using R and lme/lmer to fit different two- and three-level longitudinal models - R Psychologist</a></li>
