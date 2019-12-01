@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-us">
   <head>
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:600|PT+Sans|PT+Serif|Roboto+Slab:400.800|Merriweather&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:600|PT+Sans|PT+Serif|Roboto+Slab:400.700|Merriweather&display=swap" rel="stylesheet">
     <link rel="stylesheet" src="//normalize-css.googlecode.com/svn/trunk/normalize.css" />
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -74,6 +74,7 @@
 
     <div class="article-content">
       
+<script src="/rmarkdown-libs/kePrint/kePrint.js"></script>
 
 <div id="TOC">
   <h5>Table of contents</h5>
@@ -89,7 +90,13 @@
 <li><a href="#x1xs"><code>x+(1+x|s)</code></a></li>
 </ul></li>
 </ul></li>
-<li><a href="#understanding-x1xidg">Understanding <code>x+(1+x|ID|g)</code></a></li>
+<li><a href="#understanding-x1xidg">Understanding <code>x+(1+x|ID|g)</code></a><ul>
+<li><a href="#the-basic-distributional-model">The basic distributional model</a></li>
+<li><a href="#with-a-submodel-for-variance">With a submodel for variance</a><ul>
+<li><a href="#independent-group-level-covariances">Independent group-level covariances</a></li>
+<li><a href="#correlated-group-level-covariances-with-id">Correlated group-level covariances with <code>|&lt;ID&gt;|</code></a></li>
+</ul></li>
+</ul></li>
 <li><a href="#resources">Resources</a></li>
 </ul>
 </div>
@@ -152,7 +159,7 @@
 </ol></li>
 <li><span class="math inline">\(Y_{si} = (\beta_0 + S_{0s}) + \beta_1 X_i + e_{si}\)</span>
 <ul>
-<li><span class="math inline">\(S_{0s} \sim N(0, \sigma_{00}^2)\)</span></li>
+<li><span class="math inline">\(S_{0s} \sim \mathcal{N}(0, \sigma_{00}^2)\)</span></li>
 </ul></li>
 </ul>
 </div>
@@ -161,17 +168,14 @@
 <ul>
 <li>Independent random slopes and intercepts</li>
 <li>Estmiates four paramters:
-<ol style="list-style-type: decimal">
-<li>A global intercept, <span class="math inline">\(\beta_0\)</span></li>
-<li>A global estimate for the fixed effect (slope) of <code>x</code>, <span class="math inline">\(\beta_1\)</span></li>
-<li>How much the intercepts for levels in <code>s</code> deviate from the global intercept, <span class="math inline">\(\sigma_{00}\)</span>.</li>
+<ol start="4" style="list-style-type: decimal">
 <li>How much the slopes for levels in <code>s</code> deviate from the global slope <span class="math inline">\(\beta_1\)</span>, <span class="math inline">\(\sigma_{11}\)</span>. Or how much the effect of <code>x</code> within each level of <code>s</code> deviates from the global effect of <code>x</code>.</li>
 </ol></li>
 <li>Note that <span class="math inline">\(S_{0s}\)</span> and <span class="math inline">\(S_{1s}\)</span> are drawn from two independent distributions with different variances.</li>
 <li><span class="math inline">\(Y_{si} = (\beta_0 + S_{0s}) + (\beta_1 + S_{1s}) X_i + e_{si}\)</span>
 <ul>
-<li><span class="math inline">\(S_{0s} \sim N(0, \sigma_{00}^2)\)</span></li>
-<li><span class="math inline">\(S_{1s} \sim N(0, \sigma_{11}^2)\)</span></li>
+<li><span class="math inline">\(S_{0s} \sim \mathcal{N}(0, \sigma_{00}^2)\)</span></li>
+<li><span class="math inline">\(S_{1s} \sim \mathcal{N}(0, \sigma_{11}^2)\)</span></li>
 </ul></li>
 </ul>
 </div>
@@ -179,17 +183,13 @@
 <h3><code>x+(1+x|s)</code></h3>
 <ul>
 <li>Correlated random slopes and intercepts</li>
-<li>Estmiates four paramters:
-<ol style="list-style-type: decimal">
-<li>A global intercept, <span class="math inline">\(\beta_0\)</span></li>
-<li>A global estimate for the fixed effect (slope) of <code>x</code>, <span class="math inline">\(\beta_1\)</span></li>
-<li>How much the intercepts for levels in <code>s</code> deviate from the global intercept, <span class="math inline">\(\sigma_{00}\)</span>.</li>
-<li>How much the slopes for levels in <code>s</code> deviate from the global slope <span class="math inline">\(\beta_1\)</span>, <span class="math inline">\(\sigma_{11}\)</span>. Or how much the effect of <code>x</code> within each level of <code>s</code> deviates from the global effect of <code>x</code>.</li>
+<li>Estmiates five paramters:
+<ol start="5" style="list-style-type: decimal">
 <li>Correlation between intercepts <span class="math inline">\(S_{0s}\)</span> and slopes <span class="math inline">\(S_{1s}\)</span>, <span class="math inline">\(\sigma_{01}\)</span>.</li>
 </ol></li>
 <li><span class="math inline">\(Y_{si} = (\beta_0 + S_{0s}) + (\beta_1 + S_{1s}) X_i + e_{si}\)</span>. Same as above, but
 <ul>
-<li><span class="math inline">\(\begin{pmatrix}S_{0s} \\ S_{1s}\end{pmatrix} \sim \begin{pmatrix} 0 \\ 0 \end{pmatrix},\begin{pmatrix} \sigma_{00}^2 &amp; \sigma_{01}\\ \sigma_{01} &amp; \sigma_{11}^2 \end{pmatrix}\)</span></li>
+<li><span class="math inline">\(\begin{pmatrix}S_{0s} \\ S_{1s}\end{pmatrix} \sim \mathcal{N}\left( \begin{pmatrix} 0 \\ 0 \end{pmatrix},\begin{pmatrix} \sigma_{00}^2 &amp; \sigma_{01}\\ \sigma_{01} &amp; \sigma_{11}^2 \end{pmatrix}\right)\)</span></li>
 </ul></li>
 </ul>
 </div>
@@ -197,33 +197,238 @@
 </div>
 <div id="understanding-x1xidg" class="section level1">
 <h1>Understanding <code>x+(1+x|ID|g)</code></h1>
-<pre class="r"><code>library(brms)</code></pre>
-<pre><code>## Loading required package: Rcpp</code></pre>
-<pre><code>## Registered S3 method overwritten by &#39;xts&#39;:
-##   method     from
-##   as.zoo.xts zoo</code></pre>
-<pre><code>## Loading &#39;brms&#39; package (version 2.10.0). Useful instructions
-## can be found by typing help(&#39;brms&#39;). A more detailed introduction
-## to the package is available through vignette(&#39;brms_overview&#39;).</code></pre>
-<pre class="r"><code>library(tidyverse)</code></pre>
-<pre><code>## ── Attaching packages ───────────────────────────────────── tidyverse 1.2.1 ──</code></pre>
-<pre><code>## ✔ ggplot2 3.2.1     ✔ purrr   0.3.3
-## ✔ tibble  2.1.3     ✔ dplyr   0.8.3
-## ✔ tidyr   1.0.0     ✔ stringr 1.4.0
-## ✔ readr   1.3.1     ✔ forcats 0.4.0</code></pre>
-<pre><code>## ── Conflicts ──────────────────────────────────────── tidyverse_conflicts() ──
-## ✖ dplyr::filter() masks stats::filter()
-## ✖ dplyr::lag()    masks stats::lag()</code></pre>
-<p>Compare two models: one with the <code>|ID|</code> notation, one without. We can start with a simple model</p>
-<p>brms(brmsformula(y ~ x + (x|group)), family = normal), including the covariance matrix for the random intercept and slope (assume x is continuous). Then extend the mcelreath-style spec to a similar submodel for the variance, corresponding to something like this: brms(brmsformula(y ~ x + (x|group), sigma ~ x + (x|group), family = normal) . Do the covariances for the random slope and intercept in the sigma submodel get put into the same covariance matrix as the random effects for the mu submodel? Or do they get their own covariance matrix? In the single-pipe style, they get their own, if you add the same <ID> between two pipes instead of the single pipe, they all get the same covariance matrix: brms(brmsformula(y ~ x + (x |ID| group), sigma ~ x + (x |ID| group), family = normal) . Writing out the mcelreath style specs can help clarify the difference.</p>
-<pre class="r"><code>set.seed(5)
-n = 10
-n_condition = 5
-ABC =
-  tibble(
-    condition = rep(c(&quot;A&quot;,&quot;B&quot;,&quot;C&quot;,&quot;D&quot;,&quot;E&quot;), n),
-    response = rnorm(n * 5, c(0,1,2,1,-1), 0.5)
-  )</code></pre>
+<pre class="r"><code>library(stats)
+library(rstan)
+library(brms)
+library(tidyverse)
+library(knitr)
+library(kableExtra)
+rstan_options(auto_write = TRUE)
+options(mc.cores = parallel::detectCores())</code></pre>
+<div id="the-basic-distributional-model" class="section level2">
+<h2>The basic distributional model</h2>
+<p>We can start with a simple distributional model with a normally distributed response variable. The mean <span class="math inline">\(\mu\)</span> is estimated with the formula <code>x + (x |group)</code>. The variance parameter <span class="math inline">\(\sigma\)</span> is assumed to be the same across observations. The <code>brms</code> model output summarizes which parameters get estimated:</p>
+<pre class="r"><code># m &lt;- brm(
+#   brmsformula(y ~ x + (x |group), family = gaussian()), 
+#   data = df,  control = list(adapt_delta = .99),
+#   prior = priors1)
+m1</code></pre>
+<pre><code>##  Family: gaussian 
+##   Links: mu = identity; sigma = identity 
+## Formula: y ~ x + (x | group) 
+##    Data: df (Number of observations: 30) 
+## Samples: 4 chains, each with iter = 2000; warmup = 1000; thin = 1;
+##          total post-warmup samples = 4000
+## 
+## Group-Level Effects: 
+## ~group (Number of levels: 3) 
+##                  Estimate Est.Error l-95% CI u-95% CI Rhat Bulk_ESS Tail_ESS
+## sd(Intercept)        0.12      0.27     0.00     0.70 1.00      617      549
+## sd(x)                0.09      0.15     0.00     0.55 1.01      640      503
+## cor(Intercept,x)    -0.04      0.62    -0.97     0.96 1.00     1806     1590
+## 
+## Population-Level Effects: 
+##           Estimate Est.Error l-95% CI u-95% CI Rhat Bulk_ESS Tail_ESS
+## Intercept     0.02      0.10    -0.16     0.28 1.00      823      449
+## x             1.01      0.08     0.87     1.18 1.01      626      330
+## 
+## Family Specific Parameters: 
+##       Estimate Est.Error l-95% CI u-95% CI Rhat Bulk_ESS Tail_ESS
+## sigma     0.12      0.02     0.09     0.16 1.00     2010     1284
+## 
+## Samples were drawn using sampling(NUTS). For each parameter, Eff.Sample 
+## is a crude measure of effective sample size, and Rhat is the potential 
+## scale reduction factor on split chains (at convergence, Rhat = 1).</code></pre>
+<p>There are five parameters for the group-level and population-level combined, as we have seen above. The sixth paramter is the <span class="math inline">\(\sigma\)</span> for the normal distribution.</p>
+</div>
+<div id="with-a-submodel-for-variance" class="section level2">
+<h2>With a submodel for variance</h2>
+<p>Sometimes we are interested in the variance <span class="math inline">\(\sigma\)</span> across groups. We add a submodel for <span class="math inline">\(\sigma\)</span>, <code>x + (x|group)</code>, just like the one for <span class="math inline">\(\mu\)</span> (the <code>Family Specific Parameters</code> in <code>m1</code>).</p>
+<div id="independent-group-level-covariances" class="section level3">
+<h3>Independent group-level covariances</h3>
+<pre class="r"><code># f2 &lt;- brmsformula(
+#   y ~ x + (x|group), 
+#   sigma ~ x + (x|group),
+#   family = gaussian())
+# ...
+m2</code></pre>
+<pre><code>##  Family: gaussian 
+##   Links: mu = identity; sigma = log 
+## Formula: y ~ x + (x | group) 
+##          sigma ~ x + (x | group)
+##    Data: df (Number of observations: 30) 
+## Samples: 1 chains, each with iter = 2000; warmup = 1000; thin = 1;
+##          total post-warmup samples = 1000
+## 
+## Group-Level Effects: 
+## ~group (Number of levels: 3) 
+##                              Estimate Est.Error l-95% CI u-95% CI Rhat Bulk_ESS Tail_ESS
+## sd(Intercept)                    0.07      0.12     0.00     0.44 1.01      384      541
+## sd(x)                            0.08      0.14     0.00     0.50 1.00      261      204
+## sd(sigma_Intercept)              1.24      1.74     0.05     6.38 1.00      250      245
+## sd(sigma_x)                      1.04      1.51     0.02     5.85 1.02      177      188
+## cor(Intercept,x)                -0.02      0.61    -0.97     0.97 1.00      729      463
+## cor(sigma_Intercept,sigma_x)    -0.02      0.60    -0.96     0.97 1.01      524      505
+## 
+## Population-Level Effects: 
+##                 Estimate Est.Error l-95% CI u-95% CI Rhat Bulk_ESS Tail_ESS
+## Intercept           0.01      0.07    -0.14     0.15 1.00      574      546
+## sigma_Intercept    -2.46      1.16    -4.45    -0.22 1.00      373      303
+## x                   1.02      0.09     0.90     1.22 1.01      398      286
+## sigma_x             0.26      1.12    -2.33     2.61 1.01      123       92
+## 
+## Samples were drawn using sampling(NUTS). For each parameter, Eff.Sample 
+## is a crude measure of effective sample size, and Rhat is the potential 
+## scale reduction factor on split chains (at convergence, Rhat = 1).</code></pre>
+<p>Note that there are two correlation terms <code>cor(Intercept,x)</code> and <code>cor(sigma_Intercept,sigma_x)</code>.</p>
+</div>
+<div id="correlated-group-level-covariances-with-id" class="section level3">
+<h3>Correlated group-level covariances with <code>|&lt;ID&gt;|</code></h3>
+<pre class="r"><code># f3 &lt;- brmsformula(
+#   y ~ x + (x|2|group), 
+#   sigma ~ x + (x|2|group),
+#   family = gaussian())
+# ...
+m3</code></pre>
+<pre><code>##  Family: gaussian 
+##   Links: mu = identity; sigma = log 
+## Formula: y ~ x + (x | 2 | group) 
+##          sigma ~ x + (x | 2 | group)
+##    Data: df (Number of observations: 30) 
+## Samples: 1 chains, each with iter = 2000; warmup = 1000; thin = 1;
+##          total post-warmup samples = 1000
+## 
+## Group-Level Effects: 
+## ~group (Number of levels: 3) 
+##                                Estimate Est.Error l-95% CI u-95% CI Rhat Bulk_ESS Tail_ESS
+## sd(Intercept)                      0.12      0.29     0.00     0.82 1.00      328      164
+## sd(x)                              0.09      0.20     0.00     0.62 1.00      402      205
+## sd(sigma_Intercept)                1.27      1.69     0.04     5.68 1.00      283      351
+## sd(sigma_x)                        0.80      1.26     0.01     4.32 1.00      322      399
+## cor(Intercept,x)                  -0.01      0.46    -0.83     0.82 1.00      784      573
+## cor(Intercept,sigma_Intercept)     0.00      0.45    -0.83     0.83 1.00     1014      598
+## cor(x,sigma_Intercept)             0.02      0.46    -0.82     0.79 1.01      654      696
+## cor(Intercept,sigma_x)             0.02      0.47    -0.83     0.83 1.00     1426      816
+## cor(x,sigma_x)                     0.00      0.46    -0.81     0.85 1.00      902      619
+## cor(sigma_Intercept,sigma_x)      -0.00      0.47    -0.82     0.85 1.00      760      839
+## 
+## Population-Level Effects: 
+##                 Estimate Est.Error l-95% CI u-95% CI Rhat Bulk_ESS Tail_ESS
+## Intercept           0.02      0.14    -0.20     0.41 1.00      271      100
+## sigma_Intercept    -2.29      1.09    -4.33     0.62 1.00      384      213
+## x                   1.00      0.09     0.81     1.14 1.00      381      137
+## sigma_x             0.19      0.69    -1.55     1.43 1.00      446      263
+## 
+## Samples were drawn using sampling(NUTS). For each parameter, Eff.Sample 
+## is a crude measure of effective sample size, and Rhat is the potential 
+## scale reduction factor on split chains (at convergence, Rhat = 1).</code></pre>
+<p>We have six correlation terms estimated. <code>cor(Intercept,x)</code> and <code>cor(sigma_Intercept,sigma_x)</code> are the same from before.
+The extra parameters populate the 4x4 covariance matrix.</p>
+<pre class="r"><code>vcov(m3) %&gt;%
+  data.frame(stringsAsFactors = FALSE) %&gt;%
+  mutate_each(~ round(.x, 3)) %&gt;%
+  mutate(` ` = colnames(.)) %&gt;%
+  select(` `, everything()) %&gt;%
+  mutate_if(is.numeric, ~ cell_spec(.x,
+              background = spec_color(.x, option=&quot;D&quot;, begin = 0.5,end = 1),
+              background_as_tile = TRUE)) %&gt;%
+  kable(&quot;html&quot;, escape = F, caption = &#39;The covariance matrix&#39;, digits = 2, align = &quot;rccc&quot;)  %&gt;%
+  kable_styling(full_width = F)</code></pre>
+<table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<caption>
+<span id="tab:unnamed-chunk-13">Table 1: </span>The covariance matrix
+</caption>
+<thead>
+<tr>
+<th style="text-align:right;">
+</th>
+<th style="text-align:center;">
+Intercept
+</th>
+<th style="text-align:center;">
+sigma_Intercept
+</th>
+<th style="text-align:center;">
+x
+</th>
+<th style="text-align:right;">
+sigma_x
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right;">
+Intercept
+</td>
+<td style="text-align:center;">
+<span style="     border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: rgba(253, 231, 37, 1) !important;">0.021</span>
+</td>
+<td style="text-align:center;">
+<span style="     border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: rgba(33, 145, 140, 1) !important;">-0.014</span>
+</td>
+<td style="text-align:center;">
+<span style="     border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: rgba(33, 144, 140, 1) !important;">-0.002</span>
+</td>
+<td style="text-align:right;">
+<span style="     border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: rgba(32, 146, 140, 1) !important;">-0.012</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+sigma_Intercept
+</td>
+<td style="text-align:center;">
+<span style="     border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: rgba(33, 144, 140, 1) !important;">-0.014</span>
+</td>
+<td style="text-align:center;">
+<span style="     border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: rgba(253, 231, 37, 1) !important;">1.195</span>
+</td>
+<td style="text-align:center;">
+<span style="     border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: rgba(253, 231, 37, 1) !important;">0.011</span>
+</td>
+<td style="text-align:right;">
+<span style="     border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: rgba(33, 144, 140, 1) !important;">-0.021</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+x
+</td>
+<td style="text-align:center;">
+<span style="     border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: rgba(55, 184, 120, 1) !important;">-0.002</span>
+</td>
+<td style="text-align:center;">
+<span style="     border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: rgba(32, 147, 140, 1) !important;">0.011</span>
+</td>
+<td style="text-align:center;">
+<span style="     border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: rgba(177, 221, 46, 1) !important;">0.008</span>
+</td>
+<td style="text-align:right;">
+<span style="     border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: rgba(31, 149, 139, 1) !important;">0.001</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+sigma_x
+</td>
+<td style="text-align:center;">
+<span style="     border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: rgba(31, 151, 139, 1) !important;">-0.012</span>
+</td>
+<td style="text-align:center;">
+<span style="     border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: rgba(33, 144, 140, 1) !important;">-0.021</span>
+</td>
+<td style="text-align:center;">
+<span style="     border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: rgba(37, 172, 130, 1) !important;">0.001</span>
+</td>
+<td style="text-align:right;">
+<span style="     border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: rgba(253, 231, 37, 1) !important;">0.483</span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 </div>
 <div id="resources" class="section level1">
 <h1>Resources</h1>
@@ -236,13 +441,13 @@ ABC =
 <li><a href="https://arxiv.org/pdf/1406.5823.pdf">Fitting linear mixed-effects models using lme4</a></li>
 <li>Barr, Dale J, R. Levy, C. Scheepers und H. J. Tily (2013). <em>Random effects structure for confirmatory hypothesis testing: Keep it maximal</em>. Journal of Memory and Language, 68:255– 278.</li>
 </ul>
-<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-3"></span>
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-14"></span>
 <img src="/images/lme4.png" alt="[Fitting linear mixed-effects models using lme4](https://arxiv.org/pdf/1406.5823.pdf)" width="100%" />
 <p class="caption">
 Figure 1: <a href="https://arxiv.org/pdf/1406.5823.pdf">Fitting linear mixed-effects models using lme4</a>
 </p>
 </div>
-<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-4"></span>
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-15"></span>
 <img src="/images/barr_2013.png" alt="Barr et al. 2013" width="100%" />
 <p class="caption">
 Figure 2: Barr et al. 2013

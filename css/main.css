@@ -40,6 +40,9 @@ code {
   background-color: rgba(0, 0, 0, 0.05);
 }
 
+code.hljs{
+  font-size: 0.8em;
+}
 
 aside{
   float: left;
@@ -58,7 +61,8 @@ div#TOC ul li::before {
 }
 
 div#TOC li a{
-  line-height:1em;
+  line-height:0.8em;
+  font-size: 0.8em;
   font-style: italic;
   color: #cccccc;
   border-bottom: 1px solid #cccccc;
