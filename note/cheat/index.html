@@ -112,10 +112,10 @@
 <div id="formula-components" class="section level2">
 <h2>Formula components</h2>
 <ul>
-<li><code>aterms</code>: special <code>brms</code> syntax.</li>
-<li><code>pterms</code>: population-level terms</li>
-<li><code>gterms</code>: group-level terms</li>
-<li><code>group</code>: grouping factor</li>
+<li><code>aterms</code>: special <code>brms</code> syntax I don’t need to know yet.</li>
+<li><code>pterms</code>: population-level terms.</li>
+<li><code>gterms</code>: group-level terms.</li>
+<li><code>group</code>: grouping factor.</li>
 <li><code>1</code>: intercept, often omitted when there’s another predictor. So <code>(1+x|g)</code> is the same as <code>(x|g)</code>.</li>
 </ul>
 <p>TODO: confusing frequentist language below:</p>
@@ -326,12 +326,8 @@ m3</code></pre>
 The extra parameters populate the 4x4 covariance matrix.</p>
 <pre class="r"><code>vcov(m3) %&gt;%
   data.frame(stringsAsFactors = FALSE) %&gt;%
-  mutate_each(~ round(.x, 3)) %&gt;%
   mutate(` ` = colnames(.)) %&gt;%
   select(` `, everything()) %&gt;%
-  mutate_if(is.numeric, ~ cell_spec(.x,
-              background = spec_color(.x, option=&quot;D&quot;, begin = 0.5,end = 1),
-              background_as_tile = TRUE)) %&gt;%
   kable(&quot;html&quot;, escape = F, caption = &#39;The covariance matrix&#39;, digits = 2, align = &quot;rccc&quot;)  %&gt;%
   kable_styling(full_width = F)</code></pre>
 <table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
@@ -362,16 +358,16 @@ sigma_x
 Intercept
 </td>
 <td style="text-align:center;">
-<span style="     border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: rgba(253, 231, 37, 1) !important;">0.021</span>
+0.02
 </td>
 <td style="text-align:center;">
-<span style="     border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: rgba(33, 145, 140, 1) !important;">-0.014</span>
+-0.01
 </td>
 <td style="text-align:center;">
-<span style="     border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: rgba(33, 144, 140, 1) !important;">-0.002</span>
+0.00
 </td>
 <td style="text-align:right;">
-<span style="     border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: rgba(32, 146, 140, 1) !important;">-0.012</span>
+-0.01
 </td>
 </tr>
 <tr>
@@ -379,16 +375,16 @@ Intercept
 sigma_Intercept
 </td>
 <td style="text-align:center;">
-<span style="     border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: rgba(33, 144, 140, 1) !important;">-0.014</span>
+-0.01
 </td>
 <td style="text-align:center;">
-<span style="     border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: rgba(253, 231, 37, 1) !important;">1.195</span>
+1.19
 </td>
 <td style="text-align:center;">
-<span style="     border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: rgba(253, 231, 37, 1) !important;">0.011</span>
+0.01
 </td>
 <td style="text-align:right;">
-<span style="     border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: rgba(33, 144, 140, 1) !important;">-0.021</span>
+-0.02
 </td>
 </tr>
 <tr>
@@ -396,16 +392,16 @@ sigma_Intercept
 x
 </td>
 <td style="text-align:center;">
-<span style="     border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: rgba(55, 184, 120, 1) !important;">-0.002</span>
+0.00
 </td>
 <td style="text-align:center;">
-<span style="     border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: rgba(32, 147, 140, 1) !important;">0.011</span>
+0.01
 </td>
 <td style="text-align:center;">
-<span style="     border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: rgba(177, 221, 46, 1) !important;">0.008</span>
+0.01
 </td>
 <td style="text-align:right;">
-<span style="     border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: rgba(31, 149, 139, 1) !important;">0.001</span>
+0.00
 </td>
 </tr>
 <tr>
@@ -413,16 +409,16 @@ x
 sigma_x
 </td>
 <td style="text-align:center;">
-<span style="     border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: rgba(31, 151, 139, 1) !important;">-0.012</span>
+-0.01
 </td>
 <td style="text-align:center;">
-<span style="     border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: rgba(33, 144, 140, 1) !important;">-0.021</span>
+-0.02
 </td>
 <td style="text-align:center;">
-<span style="     border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: rgba(37, 172, 130, 1) !important;">0.001</span>
+0.00
 </td>
 <td style="text-align:right;">
-<span style="     border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: rgba(253, 231, 37, 1) !important;">0.483</span>
+0.48
 </td>
 </tr>
 </tbody>
@@ -434,6 +430,7 @@ sigma_x
 <h1>Resources</h1>
 <ul>
 <li><a href="http://paul-buerkner.github.io/brms/reference/brmsformula.html">Set up a model formula for use in brms</a></li>
+<li><a href="https://cran.r-project.org/web/packages/brms/vignettes/brms_distreg.html">Estimating Distributional Models with brms</a></li>
 <li><a href="https://stats.stackexchange.com/questions/13166/rs-lmer-cheat-sheet">lmer cheat sheet | stackoverflow</a></li>
 <li><a href="http://www.rensenieuwenhuis.nl/r-sessions-16-multilevel-model-specification-lme4/">R-Sessions 16: Multilevel Model Specification (lme4)</a></li>
 <li><a href="https://rpsychologist.com/r-guide-longitudinal-lme-lmer">Using R and lme/lmer to fit different two- and three-level longitudinal models - R Psychologist</a></li>
