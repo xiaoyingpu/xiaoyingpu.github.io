@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>geology on Xiaoying Pu</title>
+    <link>/categories/geology/</link>
+    <description>Recent content in geology on Xiaoying Pu</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 01 May 2014 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/categories/geology/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>⚗️ Mussels and hydraulic fracturing</title>
+      <link>/project/geochem/</link>
+      <pubDate>Thu, 01 May 2014 00:00:00 +0000</pubDate>
+      
+      <guid>/project/geochem/</guid>
+      <description>As a freshman, I dabbled in geochemistry with Professor Carl Kirby in Geology &amp;amp; Environmental Geosciences at Bucknell University.</description>
+    </item>
+    
+  </channel>
+</rss>
