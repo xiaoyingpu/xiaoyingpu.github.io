@@ -6,10 +6,32 @@
     <description>Recent content on Xiaoying Pu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 20 Nov 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 14 Dec 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Correctness proof</title>
+      <link>/note/correctness-proof/</link>
+      <pubDate>Sat, 14 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/note/correctness-proof/</guid>
+      <description>
+
+
+&lt;p&gt;Prove that given some PGoG spec, the recursive algorithm produces a &lt;em&gt;correct&lt;/em&gt; probabilistic visualiation, where partitions proportional to specified probabilities.
+</description>
+    </item>
+    
+    <item>
+      <title>Bad bayes</title>
+      <link>/note/bad-bayes/</link>
+      <pubDate>Mon, 09 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/note/bad-bayes/</guid>
+      <description>library(tidyverse) library(brms) What’s wrong with Bayes | Andrew Gelman’s blog</description>
+    </item>
     
     <item>
       <title>R formulas</title>
