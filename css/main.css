@@ -66,6 +66,10 @@ div#paper a {
   color: #888;
 }
 
+div#paper img {
+  max-width: 100px;
+}
+
 
 div#TOC ul {
   list-style: none;
