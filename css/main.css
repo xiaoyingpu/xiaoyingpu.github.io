@@ -50,6 +50,22 @@ aside{
   position: relative;
 }
 
+div#paper {
+  margin-top: 20px;
+}
+
+div#paper p {
+  margin-top: 0px;
+  margin-bottom: 3px;
+}
+
+div#paper a {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  font-size: 0.9em;
+  color: #888;
+}
+
 
 div#TOC ul {
   list-style: none;
