@@ -6,10 +6,19 @@
     <description>Recent content on Xiaoying Pu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 14 Dec 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 04 Jan 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>mkfigs</title>
+      <link>/note/mkfigs/</link>
+      <pubDate>Sat, 04 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/note/mkfigs/</guid>
+      <description> library(ggplot2) library(ggridges) ## ## Attaching package: &amp;#39;ggridges&amp;#39; ## The following object is masked from &amp;#39;package:ggplot2&amp;#39;: ## ## scale_discrete_manual library(viridis) ## Loading required package: viridisLite ggplot(diamonds, aes(x=price, y=cut, fill=factor(..quantile..))) + stat_density_ridges( color = &amp;quot;white&amp;quot;, scale=4, geom = &amp;quot;density_ridges_gradient&amp;quot;, calc_ecdf = TRUE, quantiles = c(0.025, 0.025), to = 8000) + scale_fill_manual(values = c(&amp;quot;#CACC90&amp;quot;, &amp;quot;#B7D3F2&amp;quot;)) + theme_minimal() + theme(legend.position = &amp;quot;none&amp;quot;) ## Picking joint bandwidth of 458 </description>
+    </item>
     
     <item>
       <title>Correctness proof</title>

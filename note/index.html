@@ -77,6 +77,20 @@
         
         
         <article class="archive-item">
+          <a href="/note/mkfigs/" class="archive-item-link">mkfigs</a>
+          <span class="archive-item-date">
+            2020
+          </span>
+          <article class = "archive-summary"> library(ggplot2) library(ggridges) ## ## Attaching package: &#39;ggridges&#39; ## The following object is masked from &#39;package:ggplot2&#39;: ## ## scale_discrete_manual library(viridis) ## Loading required package: viridisLite ggplot(diamonds, aes(x=price, y=cut, fill=factor(..quantile..))) + stat_density_ridges( color = &quot;white&quot;, scale=4, geom = &quot;density_ridges_gradient&quot;, calc_ecdf = TRUE, quantiles = c(0.025, 0.025), to = 8000) + scale_fill_manual(values = c(&quot;#CACC90&quot;, &quot;#B7D3F2&quot;)) + theme_minimal() + theme(legend.position = &quot;none&quot;) ## Picking joint bandwidth of 458 </article>
+        </article>
+      
+      
+    
+    
+      
+        
+        
+        <article class="archive-item">
           <a href="/note/correctness-proof/" class="archive-item-link">Correctness proof</a>
           <span class="archive-item-date">
             2019
@@ -116,6 +130,12 @@
     
 
 
+    
+    
+      
+        
+        
+      
     
     
       
