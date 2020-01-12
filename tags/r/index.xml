@@ -6,19 +6,10 @@
     <description>Recent content in R on Xiaoying Pu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 09 Dec 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 20 Nov 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/tags/r/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>Bad bayes</title>
-      <link>/note/bad-bayes/</link>
-      <pubDate>Mon, 09 Dec 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/note/bad-bayes/</guid>
-      <description>library(tidyverse) library(brms) What’s wrong with Bayes | Andrew Gelman’s blog</description>
-    </item>
     
     <item>
       <title>R formulas</title>

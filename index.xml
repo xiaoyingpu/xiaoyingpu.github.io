@@ -26,20 +26,7 @@
       <pubDate>Sat, 14 Dec 2019 00:00:00 +0000</pubDate>
       
       <guid>/note/correctness-proof/</guid>
-      <description>
-
-
-&lt;p&gt;Prove that given some PGoG spec, the recursive algorithm produces a &lt;em&gt;correct&lt;/em&gt; probabilistic visualiation, where partitions proportional to specified probabilities.
-</description>
-    </item>
-    
-    <item>
-      <title>Bad bayes</title>
-      <link>/note/bad-bayes/</link>
-      <pubDate>Mon, 09 Dec 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/note/bad-bayes/</guid>
-      <description>library(tidyverse) library(brms) What’s wrong with Bayes | Andrew Gelman’s blog</description>
+      <description>Prove that given some PGoG spec, the recursive algorithm produces a &lt;em&gt;correct&lt;/em&gt; probabilistic visualiation, where partitions proportional to specified probabilities.</description>
     </item>
     
     <item>

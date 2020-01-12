@@ -76,30 +76,71 @@
     
 
     <div class="article-content">
-      </p>
-<p>We care much about <em>correctness</em> in the <a href="mucollective.github.io">Probabilistic Grammar of Graphics</a>. This is a</p>
-<p>With a PGoG specification of the form: (note that these mappings are sorted by the length of their conditionals)</p>
+      
+
+
+<p>We care about <em>correctness</em> in the Probabilistic Grammar of Graphics: the proportions of visual elements (such as counts or areas) and their spatial placement should reflect the underlying probability distribution. Here I sketch an induction proof that shows PGoG should produce correct visualizations (in terms of area).</p>
+<p>PGoG specification includes probability expressions. If we sort them by the length of their conditional variables, a specificiation can have the following form:</p>
 <pre class="r"><code>aes[1] &lt;- P(A)
 ...
 aes[n] &lt;- P(X|A, ...)
 aes[n+1] &lt;- P(Y|A, ..., X)</code></pre>
-<div id="basis" class="section level1">
-<h1>Basis</h1>
-<p>We start from <code>level = 1</code>, or the first line of the specification <code>aes[1] &lt;- P(A)</code>.</p>
-<p>Suppose the random variable A has levels <span class="math inline">\(a_{1,1}, ..., a_{1,N}\)</span>. Partition in the <code>aes[1]</code> direction, (i.e., <code>width</code> or <code>height</code>) to get <span class="math inline">\(area_{1,1},..., area_{1,N}\)</span>, where <span class="math inline">\(\forall n \in 1, .., N\)</span>, <span class="math inline">\(area_{1,n} \propto P(A = a_n)\)</span>. The resulting visualization is <em>correct</em>.</p>
+<div id="sketch-of-proof" class="section level1">
+<h1>Sketch of proof</h1>
+<div id="basis" class="section level2">
+<h2>Basis</h2>
+<p>We start from <code>level = 1</code>, where we have the entire canvas and the first line of the specification <code>aes[1] &lt;- P(A)</code>.
+Suppose the random variable A has levels <span class="math inline">\(a_{i}, i \in 1,..., A\)</span>.
+Partition the canvas in the <code>aes[1]</code> direction, (i.e., <code>width</code> or <code>height</code>) to get <span class="math inline">\(area_{1,i} \propto P(A = a_i)\)</span>. The resulting visualization is <em>correct</em>.</p>
+<p>TODO: insert some visualizations</p>
 </div>
-<div id="inductive-step" class="section level1">
-<h1>Inductive Step</h1>
+<div id="inductive-step" class="section level2">
+<h2>Inductive Step</h2>
 <p><code>level = n</code></p>
-<pre class="r"><code>aes[n] &lt;- P(X|A, ...)</code></pre>
-<p>Suppose the visualization is correct up to <code>level = n</code>. At <code>level = n</code>, the random variable <span class="math inline">\(X\)</span> has levels <span class="math inline">\(x_1, .. x_M\)</span>.</p>
-<p>Consequently, we have <span class="math inline">\(area_{n,1},..., area_{1,M}\)</span> partitioned, where <span class="math inline">\(area_j \propto P(X = x_j)\)</span>.</p>
+<pre class="r"><code>aes[1] &lt;- P(A)
+...
+aes[n] &lt;- P(X|A, ...) # n lines of specs</code></pre>
+<p>Suppose the visualization is correct up to <code>level = n</code>. At <code>level = n</code>, the random variable <span class="math inline">\(X\)</span> has levels <span class="math inline">\(x_j, j \in 1...M\)</span>. We also suppose that <span class="math inline">\(\forall area_{n,j}\)</span> correctly partitioned, <em>i.e.</em>, <span class="math inline">\(area_{n,j} \propto P(A=a_i)...P(X = x_j), j \in 1...M\)</span>. Better still, all <span class="math inline">\(area\)</span>s should be correct for <span class="math inline">\(\forall n\)</span>, so the entire visualization is still correct.</p>
 <p><code>level = n + 1</code></p>
-<pre class="r"><code>aes[n+1] &lt;- P(Y|A, ..., X)</code></pre>
-<p>Want to show: <span class="math inline">\(area_{1}\)</span></p>
+<pre class="r"><code>aes[1] &lt;- P(A)
+...
+aes[n] &lt;- P(X|A, ...)
+aes[n+1] &lt;- P(Y|A, ..., X) # n + 1 lines of spec</code></pre>
+<p><span class="math inline">\(Y\)</span> has levels <span class="math inline">\(y_k, k \in 1...N\)</span>. We want to show that <span class="math inline">\(area_{n+1, k} \propto P(A=a_i)...P(Y = y_k)\)</span>; each partition is proportional to the joint distribution of <span class="math inline">\(A, ..., X ,Y\)</span>.
+For each partition <span class="math inline">\(area_{n,j}\)</span>, partition in the <code>aes[n+1]</code> direction, (i.e., <code>width</code> or <code>height</code>) to get <span class="math inline">\(area_{n+1, k} \propto P(Y = y_k), k \in 1...N\)</span>. Since <span class="math inline">\(area_{n,j} \propto P(A) ... P(X = x_j)\)</span>, it follows that <span class="math inline">\(area_{n+1, k} \propto P(A=a_i)... P (X= x_j) P(Y = y_k)\)</span>.</p>
+<p>□</p>
+</div>
+</div>
+<div id="generalizing-the-proof" class="section level1">
+<h1>Generalizing the proof</h1>
+<p>The steps above mainly apply to constructing area plots. For variants of icon arrays, we can modify the proof as:</p>
 <ol style="list-style-type: decimal">
-<li>Draw within each partition, <span class="math inline">\(area_{}\)</span></li>
+<li>partitioning/faceting along x and y axes are handled the same way</li>
+<li>replace <span class="math inline">\(area\)</span> with count of icons, so <span class="math inline">\(count \propto P(A=a_i)\)</span>, <em>etc.</em></li>
+<li>overall, the number of icons in a group (<em>e.g.</em>, within the same partition and of the same fill color) should be proportional to the joint probability <span class="math inline">\(P(A=a_i, ..., X=x_j, Y=y_k)\)</span>. In addition, the partitions of the icons, such as grouping them into the shape of a bar chart, approximately reflect marginal distributions at higher levels.</li>
 </ol>
+<!--
+If we mapp other aesthetics (fill, color, or alpha) onto `aes[n+1]`, the proof is still valid. This is because all the area partitions up until `level=n`are still correct. At `level=n+1`
+
+
+and the visual aesthetics are applied reasonably (_e.g._, mapping probability values onto color) at the last level of the specification. 
+-->
+<hr />
+
+<div class="row" id="paper">
+  <div class="two columns">
+      <img src="/images/pgog-thumbnail.jpg" width="100%">
+  </div>
+  <div class="ten columns">
+    <p><em>A Probabilistic Grammar of Graphics</em>.</p>
+    <p><strong>Xiaoying Pu</strong>, Matthew Kay. CHI 2020.  (Conditionally accepted). </p>
+    <span>
+        <a href="https://osf.io/dy8qv/">[PDF]</a>
+      
+    </span>
+  </div>
+</div>
+
 </div>
 
     </div>
