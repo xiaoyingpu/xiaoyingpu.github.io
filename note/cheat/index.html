@@ -82,6 +82,7 @@
   <h5>Table of contents</h5>
 <ul>
 <li><a href="#summary">Summary</a><ul>
+<li><a href="#the-evolution-of-those-formulas-under-construction">The evolution of those formulas (Under construction)</a></li>
 <li><a href="#formula-components">Formula components</a><ul>
 <li><a href="#group-level-terms">Group-level terms</a></li>
 </ul></li>
@@ -109,12 +110,22 @@
 <hr />
 <div id="summary" class="section level1">
 <h1>Summary</h1>
-<p>I needed to understand a Bayesian mixed-effect model and write about it. It was time to understand how those R formulas work. Those formulas seem to have a general form (maybe used by <code>lmer</code>), and the <code>brms</code> package has some additional syntax.</p>
+<p>I needed to understand a Bayesian mixed-effect model and write about it. It was time to figure out how those R formulas work.</p>
+<div id="the-evolution-of-those-formulas-under-construction" class="section level2">
+<h2>The evolution of those formulas (Under construction)</h2>
+<ol style="list-style-type: decimal">
+<li>Wilkinson-Rogers syntax. The original? most basic? kind of formula. As seen in <code>lm(y ~ x + z)</code>.</li>
+</ol>
+<p><a href="https://stats.stackexchange.com/questions/284913/the-origin-of-the-wilkinson-style-notation-such-as-1id-for-random-effects-in" class="uri">https://stats.stackexchange.com/questions/284913/the-origin-of-the-wilkinson-style-notation-such-as-1id-for-random-effects-in</a></p>
+<p>Wilkinson-Rogers-Pinheiro-Bates
+<a href="https://twitter.com/BatesDmbates/status/1111283948615802881" class="uri">https://twitter.com/BatesDmbates/status/1111283948615802881</a></p>
+<p>throw Burkner on the end there for the brms extensions to it</p>
 <p><code>brms</code> accepts formulas in the form <code>response | aterms ~ pterms + (gterms | group)</code>.</p>
+</div>
 <div id="formula-components" class="section level2">
 <h2>Formula components</h2>
 <ul>
-<li><code>aterms</code>: special <code>brms</code> syntax I don’t need to know yet.</li>
+<li><code>aterms</code>: special <code>brms</code> syntax, like using <code>trial(5)</code> to sneak in the value of <span class="math inline">\(n=5\)</span> in <span class="math inline">\(Binomial(n, p)\)</span>.</li>
 <li><code>pterms</code>: population-level terms.</li>
 <li><code>gterms</code>: group-level terms.</li>
 <li><code>group</code>: grouping factor.</li>
@@ -211,7 +222,7 @@ options(mc.cores = parallel::detectCores())</code></pre>
 <h2>The basic distributional model</h2>
 <p>We can start with a simple distributional model with a normally distributed response variable. The mean <span class="math inline">\(\mu\)</span> is estimated with the formula <code>x + (x |group)</code>. The variance parameter <span class="math inline">\(\sigma\)</span> is assumed to be the same across observations. The <code>brms</code> model output summarizes which parameters get estimated:</p>
 <pre class="r"><code># m &lt;- brm(
-#   brmsformula(y ~ x + (x |group), family = gaussian()), 
+#   brmsformula(y ~ x + (x |group), family = gaussian()),
 #   data = df,  control = list(adapt_delta = .99),
 #   prior = priors1)
 m1</code></pre>
@@ -238,8 +249,8 @@ m1</code></pre>
 ##       Estimate Est.Error l-95% CI u-95% CI Rhat Bulk_ESS Tail_ESS
 ## sigma     0.12      0.02     0.09     0.16 1.00     2010     1284
 ## 
-## Samples were drawn using sampling(NUTS). For each parameter, Eff.Sample 
-## is a crude measure of effective sample size, and Rhat is the potential 
+## Samples were drawn using sampling(NUTS). For each parameter, Bulk_ESS
+## and Tail_ESS are effective sample size measures, and Rhat is the potential
 ## scale reduction factor on split chains (at convergence, Rhat = 1).</code></pre>
 <p>There are five parameters for the group-level and population-level combined, as we have seen above. The sixth paramter is the <span class="math inline">\(\sigma\)</span> for the normal distribution.</p>
 </div>
@@ -249,7 +260,7 @@ m1</code></pre>
 <div id="independent-group-level-covariances" class="section level3">
 <h3>Independent group-level covariances</h3>
 <pre class="r"><code># f2 &lt;- brmsformula(
-#   y ~ x + (x|group), 
+#   y ~ x + (x|group),
 #   sigma ~ x + (x|group),
 #   family = gaussian())
 # ...
@@ -279,15 +290,15 @@ m2</code></pre>
 ## x                   1.02      0.09     0.90     1.22 1.01      398      286
 ## sigma_x             0.26      1.12    -2.33     2.61 1.01      123       92
 ## 
-## Samples were drawn using sampling(NUTS). For each parameter, Eff.Sample 
-## is a crude measure of effective sample size, and Rhat is the potential 
+## Samples were drawn using sampling(NUTS). For each parameter, Bulk_ESS
+## and Tail_ESS are effective sample size measures, and Rhat is the potential
 ## scale reduction factor on split chains (at convergence, Rhat = 1).</code></pre>
 <p>Note that there are two correlation terms <code>cor(Intercept,x)</code> and <code>cor(sigma_Intercept,sigma_x)</code>.</p>
 </div>
 <div id="correlated-group-level-covariances-with-id" class="section level3">
 <h3>Correlated group-level covariances with <code>|&lt;ID&gt;|</code></h3>
 <pre class="r"><code># f3 &lt;- brmsformula(
-#   y ~ x + (x|2|group), 
+#   y ~ x + (x|2|group),
 #   sigma ~ x + (x|2|group),
 #   family = gaussian())
 # ...
@@ -321,8 +332,8 @@ m3</code></pre>
 ## x                   1.00      0.09     0.81     1.14 1.00      381      137
 ## sigma_x             0.19      0.69    -1.55     1.43 1.00      446      263
 ## 
-## Samples were drawn using sampling(NUTS). For each parameter, Eff.Sample 
-## is a crude measure of effective sample size, and Rhat is the potential 
+## Samples were drawn using sampling(NUTS). For each parameter, Bulk_ESS
+## and Tail_ESS are effective sample size measures, and Rhat is the potential
 ## scale reduction factor on split chains (at convergence, Rhat = 1).</code></pre>
 <p>We have six correlation terms estimated. <code>cor(Intercept,x)</code> and <code>cor(sigma_Intercept,sigma_x)</code> are the same from before.
 The extra parameters populate the 4x4 covariance matrix. There is generally no need to look into the correlation values; the fact that correlations are estimated is enough.</p>
