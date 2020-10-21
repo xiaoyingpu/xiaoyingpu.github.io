@@ -30,12 +30,14 @@
     </item>
     
     <item>
-      <title>R formulas</title>
-      <link>/note/cheat/</link>
-      <pubDate>Wed, 20 Nov 2019 00:00:00 +0000</pubDate>
+      <title></title>
+      <link>/note/rcheat/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/note/cheat/</guid>
-      <description>Notes for figuring out how to read/write those R formulas used in &lt;code&gt;lmer&lt;/code&gt;, &lt;code&gt;brms&lt;/code&gt;, etc</description>
+      <guid>/note/rcheat/</guid>
+      <description>Notes for figuring out how to read/write those R formulas used in lmer and brms.
+  Summary I needed to understand a Bayesian mixed-effect model and write about it. It was time to figure out how those R formulas work.
+The evolution of those formulas (Under construction)  Wilkinson-Rogers syntax. The original? most basic? kind of formula. As seen in lm(y ~ x + z).  https://stats.stackexchange.com/questions/284913/the-origin-of-the-wilkinson-style-notation-such-as-1id-for-random-effects-inWilkinson-Rogers-Pinheiro-Bates https://twitter.com/BatesDmbates/status/1111283948615802881throw Burkner on the end there for the brms extensions to it</description>
     </item>
     
   </channel>
