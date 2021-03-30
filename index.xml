@@ -6,10 +6,19 @@
     <description>Recent content on Xiaoying Pu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 04 Jan 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 15 Sep 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Datamations</title>
+      <link>/project/datamations/</link>
+      <pubDate>Tue, 15 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/project/datamations/</guid>
+      <description>Automatically generating animated explainers for data analysis pipelines</description>
+    </item>
     
     <item>
       <title>mkfigs</title>
