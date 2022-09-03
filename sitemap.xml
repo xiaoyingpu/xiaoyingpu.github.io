@@ -1,158 +1,96 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  
   <url>
     <loc>/tags/design/</loc>
     <lastmod>2020-09-15T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/implementation/</loc>
     <lastmod>2020-09-15T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/project/</loc>
     <lastmod>2020-09-15T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/</loc>
     <lastmod>2020-09-15T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/</loc>
     <lastmod>2020-09-15T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/project/datamations/</loc>
     <lastmod>2020-09-15T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/note/mkfigs/</loc>
     <lastmod>2020-01-04T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/note/</loc>
     <lastmod>2020-01-04T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/note/correctness-proof/</loc>
     <lastmod>2019-12-14T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/project/pgog/</loc>
     <lastmod>2019-09-16T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/categories/</loc>
-    <lastmod>2019-08-16T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/categories/uncertainty/</loc>
-    <lastmod>2019-08-16T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/project/nrel/</loc>
     <lastmod>2019-08-16T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/analysis/</loc>
-    <lastmod>2019-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/privacy/</loc>
-    <lastmod>2019-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/survey/</loc>
-    <lastmod>2019-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
+    <loc>/categories/</loc>
+    <lastmod>2019-08-16T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/categories/uncertainty/</loc>
+    <lastmod>2019-08-16T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>/project/spy/</loc>
     <lastmod>2019-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
+    <loc>/tags/analysis/</loc>
+    <lastmod>2019-01-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/privacy/</loc>
+    <lastmod>2019-01-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/survey/</loc>
+    <lastmod>2019-01-01T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>/tags/interview/</loc>
     <lastmod>2018-10-16T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/categories/openscience/</loc>
     <lastmod>2018-10-16T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/project/prereg/</loc>
     <lastmod>2018-10-16T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/project/garden/</loc>
     <lastmod>2018-08-16T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/experiment/</loc>
-    <lastmod>2018-01-20T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/project/risk-theatre/</loc>
     <lastmod>2018-01-20T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
+    <loc>/tags/experiment/</loc>
+    <lastmod>2018-01-20T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>/categories/ensemble/</loc>
     <lastmod>2016-05-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/project/ncar/</loc>
     <lastmod>2016-05-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/project/flyloop/</loc>
     <lastmod>2015-05-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/geochemistry/</loc>
-    <lastmod>2014-05-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/categories/geology/</loc>
-    <lastmod>2014-05-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/project/geochem/</loc>
     <lastmod>2014-05-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
+    <loc>/tags/geochemistry/</loc>
+    <lastmod>2014-05-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/categories/geology/</loc>
+    <lastmod>2014-05-01T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>/about/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/note/rcheat/</loc>
   </url>
-  
 </urlset>

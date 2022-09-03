@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="generator" content="Hugo 0.74.3" />
+<meta name="generator" content="Hugo 0.102.3" />
 
 
 <title> - Xiaoying Pu</title>
@@ -195,26 +195,26 @@ Same as above, but
 </li>
 </ul>
 <h1 id="understanding-x1xidg">Understanding <code>x+(1+x|ID|g)</code></h1>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#a6e22e">library</span>(stats)
-<span style="color:#a6e22e">library</span>(rstan)
-<span style="color:#a6e22e">library</span>(brms)
-<span style="color:#a6e22e">library</span>(tidyverse)
-<span style="color:#a6e22e">library</span>(knitr)
-<span style="color:#a6e22e">library</span>(kableExtra)
-<span style="color:#a6e22e">rstan_options</span>(auto_write <span style="color:#f92672">=</span> <span style="color:#66d9ef">TRUE</span>)
-<span style="color:#a6e22e">options</span>(mc.cores <span style="color:#f92672">=</span> parallel<span style="color:#f92672">::</span><span style="color:#a6e22e">detectCores</span>())
-</code></pre></div><h2 id="the-basic-distributional-model">The basic distributional model</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span><span style="color:#a6e22e">library</span>(stats)
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">library</span>(rstan)
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">library</span>(brms)
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">library</span>(tidyverse)
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">library</span>(knitr)
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">library</span>(kableExtra)
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">rstan_options</span>(auto_write <span style="color:#f92672">=</span> <span style="color:#66d9ef">TRUE</span>)
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">options</span>(mc.cores <span style="color:#f92672">=</span> parallel<span style="color:#f92672">::</span><span style="color:#a6e22e">detectCores</span>())
+</span></span></code></pre></div><h2 id="the-basic-distributional-model">The basic distributional model</h2>
 <p>We can start with a simple distributional model with a normally
 distributed response variable. The mean <em>μ</em> is estimated with the
 formula <code>x + (x |group)</code>. The variance parameter <em>σ</em> is assumed to be
 the same across observations. The <code>brms</code> model output summarizes which
 parameters get estimated:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#75715e"># m &lt;- brm(</span>
-<span style="color:#75715e">#   brmsformula(y ~ x + (x |group), family = gaussian()),</span>
-<span style="color:#75715e">#   data = df,  control = list(adapt_delta = .99),</span>
-<span style="color:#75715e">#   prior = priors1)</span>
-m1
-</code></pre></div><pre><code>##  Family: gaussian 
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span><span style="color:#75715e"># m &lt;- brm(</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#   brmsformula(y ~ x + (x |group), family = gaussian()),</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#   data = df,  control = list(adapt_delta = .99),</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#   prior = priors1)</span>
+</span></span><span style="display:flex;"><span>m1
+</span></span></code></pre></div><pre><code>##  Family: gaussian 
 ##   Links: mu = identity; sigma = identity 
 ## Formula: y ~ x + (x | group) 
 ##    Data: df (Number of observations: 30) 
@@ -249,13 +249,13 @@ normal distribution.</p>
 submodel for <em>σ</em>, <code>x + (x|group)</code>, just like the one for <em>μ</em> (the
 <code>Family Specific Parameters</code> in <code>m1</code>).</p>
 <h3 id="independent-group-level-covariances">Independent group-level covariances</h3>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#75715e"># f2 &lt;- brmsformula(</span>
-<span style="color:#75715e">#   y ~ x + (x|group),</span>
-<span style="color:#75715e">#   sigma ~ x + (x|group),</span>
-<span style="color:#75715e">#   family = gaussian())</span>
-<span style="color:#75715e"># ...</span>
-m2
-</code></pre></div><pre><code>##  Family: gaussian 
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span><span style="color:#75715e"># f2 &lt;- brmsformula(</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#   y ~ x + (x|group),</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#   sigma ~ x + (x|group),</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#   family = gaussian())</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># ...</span>
+</span></span><span style="display:flex;"><span>m2
+</span></span></code></pre></div><pre><code>##  Family: gaussian 
 ##   Links: mu = identity; sigma = log 
 ## Formula: y ~ x + (x | group) 
 ##          sigma ~ x + (x | group)
@@ -287,13 +287,13 @@ m2
 <p>Note that there are two correlation terms <code>cor(Intercept,x)</code> and
 <code>cor(sigma_Intercept,sigma_x)</code>.</p>
 <h3 id="correlated-group-level-covariances-with-id">Correlated group-level covariances with <code>|&lt;ID&gt;|</code></h3>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#75715e"># f3 &lt;- brmsformula(</span>
-<span style="color:#75715e">#   y ~ x + (x|2|group),</span>
-<span style="color:#75715e">#   sigma ~ x + (x|2|group),</span>
-<span style="color:#75715e">#   family = gaussian())</span>
-<span style="color:#75715e"># ...</span>
-m3
-</code></pre></div><pre><code>##  Family: gaussian 
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span><span style="color:#75715e"># f3 &lt;- brmsformula(</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#   y ~ x + (x|2|group),</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#   sigma ~ x + (x|2|group),</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#   family = gaussian())</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># ...</span>
+</span></span><span style="display:flex;"><span>m3
+</span></span></code></pre></div><pre><code>##  Family: gaussian 
 ##   Links: mu = identity; sigma = log 
 ## Formula: y ~ x + (x | 2 | group) 
 ##          sigma ~ x + (x | 2 | group)
@@ -352,9 +352,7 @@ lme4</a></li>
 effects structure for confirmatory hypothesis testing: Keep it
 maximal</em>. Journal of Memory and Language, 68:255– 278.</li>
 </ul>
-<p><!-- raw HTML omitted --></p>
 <!-- raw HTML omitted -->
-<p><!-- raw HTML omitted --></p>
 <!-- raw HTML omitted -->
 
     </div>
@@ -410,7 +408,6 @@ if (!doNotTrack) {
 	ga('send', 'pageview');
 }
 </script>
-
   </body>
 </html>
 
