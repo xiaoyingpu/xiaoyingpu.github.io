@@ -2,19 +2,31 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>/tags/design/</loc>
-    <lastmod>2020-09-15T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/tags/implementation/</loc>
-    <lastmod>2020-09-15T00:00:00+00:00</lastmod>
+    <loc>/tags/interview/</loc>
+    <lastmod>2022-10-21T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/project/</loc>
-    <lastmod>2020-09-15T00:00:00+00:00</lastmod>
+    <lastmod>2022-10-21T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/tags/</loc>
-    <lastmod>2020-09-15T00:00:00+00:00</lastmod>
+    <lastmod>2022-10-21T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/theory/</loc>
+    <lastmod>2022-10-21T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/project/visualization-grammar-in-the-wild/</loc>
+    <lastmod>2022-10-21T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/</loc>
+    <lastmod>2022-10-21T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/design/</loc>
+    <lastmod>2021-07-09T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/project/visualizing-electronic-orbital-energies/</loc>
+    <lastmod>2021-07-09T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/implementation/</loc>
     <lastmod>2020-09-15T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/project/datamations/</loc>
@@ -52,9 +64,6 @@
   </url><url>
     <loc>/tags/survey/</loc>
     <lastmod>2019-01-01T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/tags/interview/</loc>
-    <lastmod>2018-10-16T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/categories/openscience/</loc>
     <lastmod>2018-10-16T00:00:00+00:00</lastmod>

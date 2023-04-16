@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>theory on Xiaoying Pu</title>
+    <link>/tags/theory/</link>
+    <description>Recent content in theory on Xiaoying Pu</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 21 Oct 2022 00:00:00 +0000</lastBuildDate><atom:link href="/tags/theory/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Visualization grammar in the wild</title>
+      <link>/project/visualization-grammar-in-the-wild/</link>
+      <pubDate>Fri, 21 Oct 2022 00:00:00 +0000</pubDate>
+      
+      <guid>/project/visualization-grammar-in-the-wild/</guid>
+      <description>Grammars are great, but how are analysts using them?</description>
+    </item>
+    
+  </channel>
+</rss>
